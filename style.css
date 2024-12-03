@@ -1,80 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jaro:opsz@6..72&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=SUSE:wght@100..800&family=Sankofa+Display&family=Teko:wght@300..700&display=swap');
 
-/* Large screens (Desktop, above 1200px) */
-@media (min-width: 1200px) {
-    body {
-        font-size: 18px; /* Adjust font size for large screens */
-    }
-
-    img {
-        max-width: 100%; /* Ensure images don't exceed their containers */
-    }
-
-    /* Add specific styles for large screens here */
-    header, footer {
-        padding: 40px; /* Example of adjusting global elements */
-    }
-}
-
-/* Medium screens (Tablets, 768px to 1199px) */
-@media (max-width: 1199px) and (min-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust font size for readability */
-    }
-
-    img {
-        max-width: 100%; /* Ensure images are responsive */
-    }
-
-    /* Adjust global spacing for medium screens */
-    header, footer {
-        padding: 20px;
-    }
-
-    nav {
-        display: flex;
-        flex-direction: row; /* Example adjustment */
-    }
-}
-
-/* Small screens (Phones, less than 768px) */
-@media (max-width: 767px) {
-    body {
-        font-size: 14px; /* Reduce font size for small screens */
-    }
-
-    img {
-        max-width: 100%;
-        height: auto; /* Ensure images scale proportionally */
-    }
-
-    nav ul {
-        display: block; /* Stack navigation items */
-    }
-
-    /* Adjust margins globally */
-    p, h1, h2, h3 {
-        margin: 10px 0;
-    }
-}
-
-/* Extra small screens (Very small devices, less than 480px) */
-@media (max-width: 479px) {
-    body {
-        font-size: 12px; /* Further reduce font size for very small devices */
-    }
-
-    img {
-        max-width: 100%;
-        height: auto; /* Scale images */
-    }
-
-    button {
-        font-size: 14px; /* Make buttons more readable */
-    }
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -254,3 +179,105 @@
     color: white;
     font-size: 20px;
   }
+
+
+
+/* Large screens (Desktop, above 1200px) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px; /* Adjust font size for large screens */
+    }
+
+    img {
+        max-width: 100%; /* Ensure images don't exceed their containers */
+    }
+
+    header, footer {
+        padding: 40px; /* Example of adjusting global elements */
+    }
+
+    .sections {
+        width: 50%; /* Keep consistent layout */
+    }
+}
+
+/* Medium screens (Tablets, 768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust font size for readability */
+    }
+
+    header, footer {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column; /* Stack for more space */
+        gap: 20px; /* Better alignment */
+    }
+
+    .sections {
+        width: 75%; /* Widen layout for medium screens */
+    }
+}
+
+/* Small screens (Phones, less than 768px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .sections {
+        width: 90%; /* Make sections almost full width */
+    }
+
+    .proj, .exp, .serv {
+        width: 100%; /* Full width for smaller screens */
+        padding: 30px; /* Reduce padding for smaller viewports */
+    }
+
+    h1 {
+        font-size: 18px; /* Scale down headings */
+        margin: 5px 0;
+    }
+
+    h4 {
+        font-size: 20px; /* Adjust subheadings */
+    }
+}
+
+/* Extra small screens (Very small devices, less than 480px) */
+@media (max-width: 479px) {
+    body {
+        font-size: 12px;
+    }
+
+    .sections {
+        width: 100%; /* Full width */
+        padding: 10px; /* Reduce padding */
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
