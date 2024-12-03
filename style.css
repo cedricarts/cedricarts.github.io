@@ -58,7 +58,8 @@
   }
 
   header{
-      margin: 5px;
+      margin: 0px;
+      padding: 0px;
   }
   
   #nav-bar {
