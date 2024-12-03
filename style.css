@@ -190,10 +190,6 @@
         max-width: 100%; /* Ensure images don't exceed their containers */
     }
 
-    header, footer {
-        padding: 40px; /* Example of adjusting global elements */
-    }
-
     .sections {
         width: 50%; /* Keep consistent layout */
     }
@@ -205,9 +201,6 @@
         font-size: 16px; /* Adjust font size for readability */
     }
 
-    header, footer {
-        padding: 20px;
-    }
 
     nav {
         flex-direction: column; /* Stack for more space */
