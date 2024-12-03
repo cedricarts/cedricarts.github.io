@@ -1,47 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jaro:opsz@6..72&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=SUSE:wght@100..800&family=Sankofa+Display&family=Teko:wght@300..700&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    align-items: stretch;
+    align-content: center;
+    font-family: Oswald;
+  }
 
-}
+  hr{
+    width: 75%;
+    height: 5px;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 1px 2px black;
+  }
 
-body {
-  margin: 10px;
-  background-color: bisque;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-  align-items: center;
-  align-content: center;
-}
+  /* Headings */
 
-#nav-bar {
-  color: whitesmoke;
-  background-color: rgba(0, 213, 255, 0.683);
-  border: 2px solid black;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  gap: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  text-shadow: 2.5px 1.5px 0px black;
-  font-size: 16pt;
-}
+  h1 {
+    margin: 10px;
+    margin-left: 100%;
+    font-size: 20pt;
+    font-weight: bolder;
+  }
 
-#menu-slide{
-  font-weight: bolder;
-  font-size: 20pt;
-}
+  h2{
+    margin: 10px;
+  }
 
-#menu-slide:hover{
-  color: rgb(93, 92, 92);
-  text-shadow: 2.5px 1.5px 0px rgba(255, 255, 255, 0.642);
-}
+  h3{
+    color: rgb(6, 148, 129);
+  }
 
-h1 {
-  margin: 10px;
-  margin-left: 100%;
-  font-size: 20pt;
-  font-weight: bolder;
-}
+  h4{
+    font-size: 24pt;
+    margin-bottom: 15px;
+  }
+
+  p{
+    margin: 20px;
+    color: rgb(6, 148, 129);
+    text-shadow: 1px 1px 1px black;
+    font-size: 25pt;
+    font-family: Kanit;
+    font-weight: 550;
+    
+  }
+
+  header{
+    margin: 30px;
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+  #nav-bar {
+    color: whitesmoke;
+    background-color: rgba(0, 213, 255, 0.683);
+    border: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    gap: 1750px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    text-shadow: 1px 1px 1px black;
+    font-size: 18pt;
+  }
+  
+  #menu-slide{
+    font-weight: bolder;
+    font-size: 20pt;
+  }
+  
+  #menu-slide:hover{
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  }
+  
+  
+
+  .content-container{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+  }
+
+  /* Sections */
+
+  .sections{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-image: linear-gradient(90deg, rgb(255, 187, 0), rgb(132, 255, 0));
+    color: white;
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    animation: move 0.2s ease-in-out;
+    margin: 15px;
+    overflow: hidden;
+    box-shadow: 4px 4px 2px black;
+
+  }
+
+  .proj{
+    width: 60%;
+    padding: 50px;
+    border: 3px white double;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    margin: 15px;
+    box-shadow: 3px 3px 4px black;
+    margin: 20px;
+    
+  }
+
+  .exp{
+    margin: 20px;
+    width: 60%;
+    padding: 50px;
+    border: 3px white double;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    margin: 15px;
+    box-shadow: 3px 3px 4px black;
+  }
+
+  .serv{
+    margin: 20px;
+    width: 60%;
+    padding: 50px;
+    border: 3px white double;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    margin: 15px;
+    box-shadow: 3px 3px 4px black;
+  }
+
+  a{
+    color: white;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  footer{
+    background-color: rgb(255, 234, 0);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+  }
