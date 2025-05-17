@@ -1,59 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Cedric Arts</title>
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!--Navigation-->
-    <section class="nav">
+    <nav>
         <div class="nav-container">
-           <div class="nav-content">
             <div class="logo">
+                <img src="images/4.png" alt="Logo" class="logo-image">
+                 <div class="logo-name">
+                    <h1>Cedric Arts</h1>
+                </div>
             </div>
-            <div class="nav-links"><a href = "index.html">Home</a></div>
-            <div class="nav-links"><a href = "#about">About</a></div>
-            <div class="nav-links"><a href = "#contacts">Contact</a></div>
-            <div class="nav-links"><a href = "#services">Services</a></div>
-               <div class"nav-links"><a href="#projects">Projects</a></div>
-           </div>
-        </div>
-    </section>
-    <div class = "intro">
-        <h1>I AM</h1>
-    <h2 class = "name">Cedric Arts</h2>
-    </div>
+           
+            <div class="nav-links">
+                <ul class="nav-list">
+                    <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#about"><i class="fa-solid fa-address-card"></i></a></li>
+                    <li><a href="#services"><i class="fa-solid fa-server"></i></a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-phone"></i></a></li>
+                    <div class="light-dark">
+                        <button id="dark"><i class="fa-solid fa-moon" id="dark-mode"></i></button>
+                        <button id="light"><i class="fa-solid fa-sun" id="ligth-mode"></i></button>
+                    </div>
+                </ul>
+            </div>
+    </nav>
 
-    <section id="about" class="sections">
-        <h1>About Me</h1>
-    </section>
-    <section id="contacts" class="sections">
-        <h1>Contacts</h1> <br>
-        Email: <a href = "mailto: cedricmnisi01@gmail.com">cedricmnisi01@gmail.com</a>
-        WhatsApp: +2781 779 8709
-
-
-    </section>
-    <section id="services" class="sections">
-        <h1>Services</h1> <br>
-       <ul>
-            <li>Web Development</li>
-            <li>Graphic Design</li>
-            <li></li>
-            <li></li>
-       </ul>
-    </section>
-    <section id="projects" class="sections">
-        <h2>Projects</h2>
-        <a href="http://cedricarts.github.io/cedricarts-jscounter/"> JS Counter</a>
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Cedric Arts, <p id="username"></p></h2>
     </section>
 
-  <footer class="footer">
-    <p class="footer_content">&copy; 2025 Cedric Arts</p>
-  </footer>
+    <section id="services" class="services">
+        <h3>Our Services</h3>
+        <table>
+            <tr>
+                <th>Services</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Web Design</td>
+                <td>Creating beautiful and responsive websites.</td>
+                <td>$1000</td>
+            </tr>
+
+            <tr>
+                <td>Graphic Design</td>
+                <td>Creating stunning graphics for your brand.</td>
+                <td>$500</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact" class="contact">
+        <form class="contact-us-form">
+            <h3>Contact Us</h3>
+            <div class="personal-info">
+                <label for="name">Name: </label>
+                <input type="text" id="name" class="name" placeholder="John Doe" required>
+                <label for="contact-no">Contact No: </label>
+                <input type="tel" id="contact-no" class="contact-no" placeholder="123-456-7890" required>
+                <label for="email">Email: </label>
+                <input type="email" id="email" class="email" placeholder="johndoe@gmail.com" required>
+            </div>
+            <div id="message" class="message">
+                <label for="message">Message: </label>
+                <textarea id="message" class="message-text" placeholder="Your message here..." required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="footer" class="footer">
+        <audio id="audio" src="song.mp3" controls loop autoplay></audio>
+         <p>&copy; 2025 Cedric Arts. All rights reserved.</p>
+         <div class="social-media">
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-facebook" id="facebook"></i></a></li>
+                <!--<li><a href="#"><i class="fa-brands fa-twitter" id="twitter"></i></a></li>-->
+                <li><a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin" id="linkedin"></i></a></li>
+                <li><a href="https://github.com/cedricarts/"><i class="fa-brands fa-github" id="github"></i></a></li>
+                <li><a href="https://youtube.com/@Cedric_Arts"><i class="fa-brands fa-youtube" id="youtube"></i></a></li>
+            </ul>
+         </div>
+    </section>
     
+   
 </body>
+<script src="https://kit.fontawesome.com/c487386ab7.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </html>
