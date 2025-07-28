@@ -1,0 +1,218 @@
+/* Global CSS */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Big+Shoulders:opsz,wght@10..72,100..900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jaini&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rock+Salt&family=Rowdies:wght@300;400;700&family=Smooch+Sans:wght@100..900&family=Tektur:wght@400..900&display=swap');
+
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-light: #ffeedd;
+  --text-dark: #fff;
+  --text-light: #000;
+  --primary: cyan;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background: #111;
+  padding: 1rem;
+  min-height: 100vh;
+  position: fixed;
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  color: cyan;
+  margin-bottom: 2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-content {
+  margin-left: 200px;
+  padding: 2rem;
+  flex: 1;
+  transition: margin 0.3s ease;
+}
+
+.section {
+  display: none;
+  margin: 10px;
+}
+
+.section.visible {
+  display: block;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: #222;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.resume-controls {
+  margin: 1rem 0;
+}
+
+.resume-preview {
+  margin-top: 1rem;
+}
+
+.btn {
+  background: cyan;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00ffffaa;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    left: -220px;
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .toggle-btn {
+    display: block;
+    background: none;
+    border: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 11;
+    color: cyan;
+    font-size: 1.5rem;
+  }
+}
+
+.toggle-btn {
+  display: none;
+}
+
+/* Mobile toggle fix */
+.toggle-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #00cccc;
+}
+
+/* Show toggle only on small screens */
+@media screen and (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-left: 1rem;
+    transition: margin 0.3s ease;
+  }
+}
+
+
+.navbar-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-decoration: none;
+  background-color: #00cccc;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#projectList li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    list-style: none;
+}
+
+#youtube{
+    color: #FF0000;
+}
