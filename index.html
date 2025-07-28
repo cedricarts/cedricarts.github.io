@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Cedric Arts</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="images/4.png" alt="Logo" class="logo-image">
-                 <div class="logo-name">
-                    <h1>Cedric Arts</h1>
-                </div>
-            </div>
-           
-            <div class="nav-links">
-                <ul class="nav-list">
-                    <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="#about"><i class="fa-solid fa-address-card"></i></a></li>
-                    <li><a href="#services"><i class="fa-solid fa-server"></i></a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-phone"></i></a></li>
-                    <div class="light-dark">
-                        <button id="dark"><i class="fa-solid fa-moon" id="dark-mode"></i></button>
-                        <button id="light"><i class="fa-solid fa-sun" id="ligth-mode"></i></button>
-                    </div>
-                </ul>
-            </div>
+<body class="dark">
+  <div class="container">
+    <nav class="sidebar" id="sidebar">
+      <div class="logo">🚀 YourLogo</div>
+      <ul>
+        <li><a href="#home"><button class="navbar-btn"><i data-lucide="home"></i>Home</button></a></li>
+        <li class="navbar-btn"><i data-lucide="briefcase"></i><a href="#projects"> Projects</a></li>
+        <li class="navbar-btn"><i data-lucide="message-square"></i><a href="#testimonials"> Testimonials</a></li>
+        <li class="navbar-btn"><i data-lucide="file-text"></i><a href="#resume"> Resume</a></li>
+        <li class="navbar-btn" onclick="toggleMode()"><i data-lucide="sun"></i> Toggle Mode</li>
+        <li class="navbar-btn"><i data-lucide="star"></i><a href="#skills"> Skills</a></li>
+        <li class="navbar-btn"><i data-lucide="heart"></i><a href="#faith"> Faith</a></li>
+      </ul>
     </nav>
 
-    <section id="about" class="hero">
-        <div class="hero-content">
-            <h2>Welcome to Cedric Arts, <p id="username"></p></h2>
-    </section>
+    <div class="main-content">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <i data-lucide="menu"></i>
+      </button>
 
-    <section id="services" class="services">
-        <h3>Our Services</h3>
-        <table>
-            <tr>
-                <th>Services</th>
-                <th>Description</th>
-                <th>Price</th>
-            </tr>
-            <tr>
-                <td>Web Design</td>
-                <td>Creating beautiful and responsive websites.</td>
-                <td>$1000</td>
-            </tr>
+      <section id="home" class="section visible">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I’m a developer passionate about building creative solutions.</p>
+      </section>
 
-            <tr>
-                <td>Graphic Design</td>
-                <td>Creating stunning graphics for your brand.</td>
-                <td>$500</td>
-            </tr>
-        </table>
-    </section>
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <input type="text" id="searchBar" onkeyup="searchProjects()" placeholder="Search projects..." />
+        <ul id="projectList">
+          <li>Space Dash</li>
+          <li><a href="https://github.com/cedricarts/cedricarts-jscounter">JS Counter App</a> <a href="https://cedricarts.github.io/cedricarts-jscounter/">JCA Web</a></li>
+          <li>HS Website</li>
+        </ul>
+      </section>
 
-    <section id="contact" class="contact">
-        <form class="contact-us-form">
-            <h3>Contact Us</h3>
-            <div class="personal-info">
-                <label for="name">Name: </label>
-                <input type="text" id="name" class="name" placeholder="John Doe" required>
-                <label for="contact-no">Contact No: </label>
-                <input type="tel" id="contact-no" class="contact-no" placeholder="123-456-7890" required>
-                <label for="email">Email: </label>
-                <input type="email" id="email" class="email" placeholder="johndoe@gmail.com" required>
-            </div>
-            <div id="message" class="message">
-                <label for="message">Message: </label>
-                <textarea id="message" class="message-text" placeholder="Your message here..." required></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+      <section id="testimonials" class="section">
+        <h2>Testimonials</h2>
+        <ul>
+          <li>"Amazing work on the Hive UI!" - Client A</li>
+          <li>"Reliable and efficient developer." - Client B</li>
+        </ul>
+      </section>
 
-    <section id="footer" class="footer">
-        <audio id="audio" src="song.mp3" controls loop autoplay></audio>
-         <p>&copy; 2025 Cedric Arts. All rights reserved.</p>
-         <div class="social-media">
-            <ul>
-                <li><a href="#"><i class="fa-brands fa-facebook" id="facebook"></i></a></li>
-                <!--<li><a href="#"><i class="fa-brands fa-twitter" id="twitter"></i></a></li>-->
-                <li><a href="#"><i class="fa-brands fa-instagram" id="instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-linkedin" id="linkedin"></i></a></li>
-                <li><a href="https://github.com/cedricarts/"><i class="fa-brands fa-github" id="github"></i></a></li>
-                <li><a href="https://youtube.com/@Cedric_Arts"><i class="fa-brands fa-youtube" id="youtube"></i></a></li>
-            </ul>
-         </div>
-    </section>
-    
-   
+      <section id="resume" class="section">
+        <h2>Resume</h2>
+        <div class="resume-controls">
+          <button class="btn" onclick="toggleResume()">Toggle Resume View</button>
+          <a href="resume.pdf" download class="btn">⬇️ Download Resume</a>
+        </div>
+        <div id="resumePreview" class="resume-preview">
+          <iframe src="resume.pdf" width="100%" height="500px"></iframe>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Hobbies & Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">Unity</div>
+          <div class="skill-card">Flutter</div>
+          <div class="skill-card">Firebase</div>
+          <div class="skill-card">C#</div>
+          <div class="skill-card">VB.NET</div>
+          <div class="skill-card">Game Development</div>
+          <div class="skill-card">App Development</div>
+          <div class="skill-card">Anime</div>
+          <div class="skill-card">Tech Reviews</div>
+          <div class="skill-card">Design</div>
+        </div>
+      </section>
+
+      <section id="faith" class="section">
+        <h2>Faith</h2>
+        <p>
+          I haven’t always been super spiritual or the type to openly talk about God, but honestly, He’s been there for me in ways I can’t even fully explain.
+          I’ve had moments where life felt heavy, confusing, or just numb — but somehow, through all of that, I knew I wasn’t alone.
+          God has been patient with me, even when I’ve been distant or inconsistent.
+          He’s brought peace when nothing made sense, opened doors I didn’t ask for, and reminded me who I am when I almost forgot.
+          I’m still learning, still growing, but I know for sure — He’s real. And He’s working on me, every single day.
+        </p>
+        <blockquote>
+          “Do not be conformed to this world, but be transformed by the renewing of your mind...”<br />
+          — Romans 12:2
+        </blockquote>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
-<script src="https://kit.fontawesome.com/c487386ab7.js" crossorigin="anonymous"></script>
-<script src="script.js"></script>
 </html>
