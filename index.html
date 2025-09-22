@@ -1,101 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <title>Cedric Arts</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/c487386ab7.js" crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6841184836474681"
+     crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-6841184836474681">
 </head>
-<body class="dark">
-  <div class="container">
-    <nav class="sidebar" id="sidebar">
-      <div class="logo">🚀 YourLogo</div>
-      <ul>
-        <li><a href="#home"><button class="navbar-btn"><i data-lucide="home"></i>Home</button></a></li>
-        <li class="navbar-btn"><i data-lucide="briefcase"></i><a href="#projects"> Projects</a></li>
-        <li class="navbar-btn"><i data-lucide="message-square"></i><a href="#testimonials"> Testimonials</a></li>
-        <li class="navbar-btn"><i data-lucide="file-text"></i><a href="#resume"> Resume</a></li>
-        <li class="navbar-btn" onclick="toggleMode()"><i data-lucide="sun"></i> Toggle Mode</li>
-        <li class="navbar-btn"><i data-lucide="star"></i><a href="#skills"> Skills</a></li>
-        <li class="navbar-btn"><i data-lucide="heart"></i><a href="#faith"> Faith</a></li>
-      </ul>
-    </nav>
 
-    <div class="main-content">
-      <button class="toggle-btn" onclick="toggleSidebar()">
-        <i data-lucide="menu"></i>
-      </button>
-
-      <section id="home" class="section visible">
-        <h1>Welcome to My Portfolio</h1>
-        <p>I’m a developer passionate about building creative solutions.</p>
-      </section>
-
-      <section id="projects" class="section">
-        <h2>Projects</h2>
-        <input type="text" id="searchBar" onkeyup="searchProjects()" placeholder="Search projects..." />
-        <ul id="projectList">
-          <li>Space Dash</li>
-          <li><a href="https://github.com/cedricarts/cedricarts-jscounter">JS Counter App</a> <a href="https://cedricarts.github.io/cedricarts-jscounter/">JCA Web</a></li>
-          <li>HS Website</li>
-        </ul>
-      </section>
-
-      <section id="testimonials" class="section">
-        <h2>Testimonials</h2>
-        <ul>
-          <li>"Amazing work on the Hive UI!" - Client A</li>
-          <li>"Reliable and efficient developer." - Client B</li>
-        </ul>
-      </section>
-
-      <section id="resume" class="section">
-        <h2>Resume</h2>
-        <div class="resume-controls">
-          <button class="btn" onclick="toggleResume()">Toggle Resume View</button>
-          <a href="resume.pdf" download class="btn">⬇️ Download Resume</a>
-        </div>
-        <div id="resumePreview" class="resume-preview">
-          <iframe src="resume.pdf" width="100%" height="500px"></iframe>
-        </div>
-      </section>
-
-      <section id="skills" class="section">
-        <h2>Hobbies & Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-card">JavaScript</div>
-          <div class="skill-card">Unity</div>
-          <div class="skill-card">Flutter</div>
-          <div class="skill-card">Firebase</div>
-          <div class="skill-card">C#</div>
-          <div class="skill-card">VB.NET</div>
-          <div class="skill-card">Game Development</div>
-          <div class="skill-card">App Development</div>
-          <div class="skill-card">Anime</div>
-          <div class="skill-card">Tech Reviews</div>
-          <div class="skill-card">Design</div>
-        </div>
-      </section>
-
-      <section id="faith" class="section">
-        <h2>Faith</h2>
-        <p>
-          I haven’t always been super spiritual or the type to openly talk about God, but honestly, He’s been there for me in ways I can’t even fully explain.
-          I’ve had moments where life felt heavy, confusing, or just numb — but somehow, through all of that, I knew I wasn’t alone.
-          God has been patient with me, even when I’ve been distant or inconsistent.
-          He’s brought peace when nothing made sense, opened doors I didn’t ask for, and reminded me who I am when I almost forgot.
-          I’m still learning, still growing, but I know for sure — He’s real. And He’s working on me, every single day.
-        </p>
-        <blockquote>
-          “Do not be conformed to this world, but be transformed by the renewing of your mind...”<br />
-          — Romans 12:2
-        </blockquote>
-      </section>
-    </div>
+<body>
+  <!-- SVG Background -->
+  <div class="wave-background">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill-opacity="0.1">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" values="
+          M0,160 C480,300 960,20 1440,160 L1440,320 L0,320 Z;
+          M0,180 C480,100 960,300 1440,180 L1440,320 L0,320 Z;
+          M0,160 C480,300 960,20 1440,160 L1440,320 L0,320 Z" />
+      </path>
+    </svg>
   </div>
 
-  <script src="script.js"></script>
-  <script>lucide.createIcons();</script>
+  <!-- Mobile Menu Toggle -->
+  <div class="mobile-menu-toggle" onclick="toggleMobileMenu()"><i class="fa-solid fa-ellipsis"></i></div>
+
+  <!-- Sidebar Nav -->
+  <nav id="sidebar">
+    <img src="ca-logo.png" alt="Cedric Arts">
+    <h1 class="title">Cedric Arts</h1>
+    <a href="#about">About</a>
+    <hr>
+    <a href="#merch">My Merch</a>
+    <hr>
+    <a href="#contact">Contact</a>
+    <button id="toggle-btn" onclick="toggleTheme()"><i class="fa-solid fa-lightbulb"></i></button>
+
+    <div class="social-links">
+      <a href="https://twitter.com" target="_blank" class="x-link"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank" class="insta-link"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://youtube.com/@Cedric_Arts" class="yt-link"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://github.com/cedricarts" class="git-link"><i class="fa-brands fa-github"></i></a>
+    </div>
+
+    <div class="footer-part" id="footer-part">
+      <p id="footer-p">&copy; 2023 - 2025 Cedric Arts. All rights reserved.</p>
+    </div>
+  </nav>
+
+  <main>
+    <section id="about">
+      <div class="banner-section">
+      </div>
+      <div>
+        <h2>About Me</h2>
+        <p>I am an IT & Computer Science student at <a id="links" href="https://www.ntc.edu.za/index.html">Nkangala TVET
+            College</a>.
+          Currently doing NCV Level 3. Have a game on Google Play - <a
+            id="links" href="https://play.google.com/store/apps/details?id=com.nas.spacedash">Space Dash</a> and actively working
+          to make
+          more games and webs, I also have been working on some projects.:
+
+        <h3>Projects</h3>
+        <ul>
+          <li>Horizon Synergy</li>
+          <li><a href="https://cedricarts.github.io/luminadesigns">Lumina Designs</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.nas.spacedash">Space Dash</a></li>
+          <li>CyberWear Website</li>
+          <li>JS Counter App</li>
+          <li>Madlib C#</li>
+          <li><a href="https://cedricarts.github.io/cedricarts/cedricarts">Python Password Generator</a></li>
+        </ul>
+        </p>
+
+      </div>
+      <div class="languages">
+        <h3>Languages</h3>
+        <ul class="languages-list">
+          <li><img src="python.png"> Python <br> <input type="range" min="0" max="5" id="pro-slider"></li>
+          <li><img src="js.png"> Javascript</li>
+        </ul>
+
+        <h3>Still Learning</h3>
+        <ul class="languages-list">
+          <li><img src="cpp.png"> C++</li>
+          <li><img src="csharp.png"> C#</li>
+          <li><i class="fa-brands fa-flutter" style="color: #0091ff;"></i> Flutter</li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <section id="merch">
+      <h2>My Merch</h2>
+      <p>Get the best clothing, meant for developers and the youth.</p>
+      <h3> Coming Soon!!</h3>
+    </section>
+
+    <section id="contact">
+    
+    </section>
+  </main>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
