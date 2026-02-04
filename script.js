@@ -16,9 +16,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Add scroll effect to navigation
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('nav');
-  if (window.scrollY > 100) {
-    nav.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-  } else {
-    nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+  if (!nav) {
+    return;
   }
+  nav.classList.toggle('nav-scrolled', window.scrollY > 100);
 });
+
+// Mobile navigation toggle
+const navToggle = document.querySelector('.nav-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+const mobileBackdrop = document.querySelector('[data-mobile-nav-backdrop]');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+const closeMobileNav = () => {
+  if (!mobileNav || !mobileBackdrop || !navToggle) {
+    return;
+  }
+  mobileNav.classList.remove('open');
+  mobileBackdrop.classList.remove('open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  navToggle.setAttribute('aria-expanded', 'false');
+};
+
+const openMobileNav = () => {
+  if (!mobileNav || !mobileBackdrop || !navToggle) {
+    return;
+  }
+  mobileNav.classList.add('open');
+  mobileBackdrop.classList.add('open');
+  mobileNav.setAttribute('aria-hidden', 'false');
+  navToggle.setAttribute('aria-expanded', 'true');
+};
+
+if (navToggle && mobileNav && mobileBackdrop) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.contains('open');
+    if (isOpen) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
+  });
+
+  mobileBackdrop.addEventListener('click', closeMobileNav);
+  const closeButton = document.querySelector('.mobile-nav-close');
+  if (closeButton) {
+    closeButton.addEventListener('click', closeMobileNav);
+  }
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+}
