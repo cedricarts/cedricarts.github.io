@@ -49,6 +49,8 @@ nav {
   background: rgba(15, 17, 21, 0.8);
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
   z-index: 1000;
   padding: 1rem 0;
 }
@@ -234,6 +236,8 @@ section {
   overflow: hidden;
   border: 1px solid var(--card-border);
   box-shadow: 0 18px 30px rgba(0, 0, 0, 0.4), 0 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.4), 0 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -243,6 +247,10 @@ section {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 26px 40px rgba(0, 0, 0, 0.5), 0 10px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
+  box-shadow: 0 26px 40px rgba(0, 0, 0, 0.5), 0 10px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.4);
   border-color: rgba(0, 153, 255, 0.6);
 }
 
@@ -265,6 +273,7 @@ section {
 .project-image {
   width: 100%;
   height: clamp(170px, 22vw, 220px);
+  height: 200px;
   background: linear-gradient(135deg, rgba(0, 153, 255, 0.6) 0%, rgba(118, 75, 162, 0.7) 100%);
   display: flex;
   align-items: center;
@@ -341,6 +350,8 @@ section {
   border-radius: 18px;
   border: 1px solid var(--card-border);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
   grid-column: span 6;
 }
 
@@ -381,6 +392,8 @@ section {
   padding: 2rem;
   border-radius: 18px;
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid var(--card-border);
   border-left: 4px solid var(--primary);
   grid-column: span 4;
@@ -427,6 +440,8 @@ section {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid var(--card-border);
   grid-column: span 6;
 }
@@ -435,6 +450,7 @@ section {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
+  height: 300px;
   background: linear-gradient(135deg, #0b0f14 0%, #0b0f14 100%);
   display: flex;
   align-items: center;
@@ -468,6 +484,8 @@ section {
   margin-bottom: 2rem;
   border: 1px solid var(--card-border);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
 }
 
 .stats-grid {
