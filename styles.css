@@ -55,6 +55,12 @@ nav {
 
 nav.nav-scrolled {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+nav.nav-scrolled {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
@@ -446,7 +452,6 @@ section {
   border-radius: 18px;
   border: 1px solid var(--card-border);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
   grid-column: span 6;
 }
@@ -487,7 +492,6 @@ section {
   background: var(--card);
   padding: 2rem;
   border-radius: 18px;
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid var(--card-border);
@@ -536,8 +540,6 @@ section {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid var(--card-border);
   grid-column: span 6;
 }
@@ -546,7 +548,6 @@ section {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
-  height: 300px;
   background: linear-gradient(135deg, #0b0f14 0%, #0b0f14 100%);
   display: flex;
   align-items: center;
@@ -580,8 +581,6 @@ section {
   margin-bottom: 2rem;
   border: 1px solid var(--card-border);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35), 0 6px 0 rgba(0, 0, 0, 0.22);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
 }
 
 .stats-grid {
