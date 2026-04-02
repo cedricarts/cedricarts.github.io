@@ -211,8 +211,13 @@ nav {
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
+  background-color: #24242450;
+  padding: 10px;
+  border-radius: 12px;
 }
+
+
 
 .btn {
   display: inline-block;
@@ -221,6 +226,12 @@ nav {
   padding: 0.7rem 1.2rem;
   font-weight: 600;
   border: 1px solid var(--border);
+}
+
+.btn:hover{
+  size: 2px;
+  border-color: var(--accent);
+  transform: scale(1.2rem);
 }
 
 .btn-primary {
