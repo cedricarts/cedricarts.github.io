@@ -40,24 +40,7 @@ body {
   line-height: 1.65;
   background: var(--bg);
   color: var(--text);
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-
-.btn,
-.project-card,
-.skill-category,
-.cert-card,
-.video-card,
-.channel-stats,
-.theme-toggle,
-.nav-toggle,
-.mobile-nav-close,
-.nav-links a,
-.mobile-nav a,
-.project-link,
-.cert-link,
-.contact-link {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 h1, h2, h3, .logo {
@@ -251,19 +234,6 @@ nav {
   background: transparent;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.project-card:hover,
-.skill-category:hover,
-.cert-card:hover,
-.video-card:hover,
-.channel-stats:hover {
-  transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--accent) 50%, var(--border));
-}
-
 section {
   max-width: 1080px;
   margin: 0 auto;
@@ -423,50 +393,6 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   color: var(--text-muted);
-}
-
-
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-content > * {
-  animation: riseIn 0.7s ease both;
-}
-
-.hero-content > *:nth-child(2) { animation-delay: 0.1s; }
-.hero-content > *:nth-child(3) { animation-delay: 0.2s; }
-.hero-content > *:nth-child(4) { animation-delay: 0.3s; }
-
-@keyframes riseIn {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 @media (max-width: 860px) {
