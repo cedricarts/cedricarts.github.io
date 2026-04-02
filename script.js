@@ -76,3 +76,25 @@ if (navToggle && mobileNav && mobileBackdrop) {
 
   mobileNavLinks.forEach((link) => link.addEventListener('click', closeMobileNav));
 }
+
+
+// Scroll reveal animations
+const revealTargets = document.querySelectorAll(
+  'section .section-title, section .section-subtitle, .project-card, .skill-category, .cert-card, .video-card, .channel-stats, .contact-links, footer p'
+);
+
+revealTargets.forEach((el) => el.classList.add('reveal'));
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.16, rootMargin: '0px 0px -40px 0px' }
+);
+
+revealTargets.forEach((el) => revealObserver.observe(el));
