@@ -80,7 +80,7 @@ if (navToggle && mobileNav && mobileBackdrop) {
 
 // Scroll reveal animations
 const revealTargets = document.querySelectorAll(
-  'section .section-title, section .section-subtitle, .project-card, .skill-category, .cert-card, .video-card, .channel-stats, .contact-links, footer p'
+  '.hero-copy, .hero-panel, .metrics-strip, .section-heading, .project-card, .experiment-card, .case-study-card, .ecosystem-card, .video-card, .channel-stats, .build-log-card, .about-grid, .skill-category, .cert-card, .contact-card, footer p'
 );
 
 revealTargets.forEach((el) => el.classList.add('reveal'));
