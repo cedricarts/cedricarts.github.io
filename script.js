@@ -80,7 +80,7 @@ if (navToggle && mobileNav && mobileBackdrop) {
 
 // Scroll reveal animations
 const revealTargets = document.querySelectorAll(
-  'section .section-title, section .section-subtitle, .project-card, .skill-category, .cert-card, .video-card, .channel-stats, .contact-links, footer p'
+  '.hero-highlights, .section-heading, .project-card, .timeline-item, .case-study-card, .video-card, .content-stats, .build-log-card, .about-layout, .skill-category, .cert-card, .contact-card, footer p'
 );
 
 revealTargets.forEach((el) => el.classList.add('reveal'));
