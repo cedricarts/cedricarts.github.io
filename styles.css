@@ -79,6 +79,9 @@ img {
 }
 
 nav {
+  backdrop-filter: blur(22px) saturate(150%);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  border-bottom: 1px solid var(--border);
   position: fixed;
   top: 0;
   width: 100%;
@@ -857,6 +860,7 @@ footer {
   .wide-card {
     grid-column: span 1;
   }
+}
 
   .hero-panel::before {
     min-height: 150px;
