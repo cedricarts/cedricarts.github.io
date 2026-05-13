@@ -74,17 +74,42 @@
     </nav>
 
     <header class="hero" id="home">
-        <div class="hero-content">
-            <p class="eyebrow">Creative technologist from Emalahleni, South Africa</p>
-            <h1>Building digital products, experiments, and experiences that ship.</h1>
-            <p class="hero-description">I build digital products, interactive experiences, experimental tools, and creative systems. From client platforms and games to connected systems and rapid prototypes, I focus on shipping ideas that are functional, scalable, and alive.</p>
-            <div class="cta-buttons" aria-label="Primary actions">
-                <a href="#projects" class="btn btn-primary">Explore Projects</a>
-                <a href="#experiments" class="btn btn-secondary">Current Experiments</a>
-                <a href="#content" class="btn btn-ghost">Watch The Journey</a>
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Creative technologist from Emalahleni, South Africa</p>
+                <h1>Building digital products, experiments, and experiences that ship.</h1>
+                <p class="hero-description">I build digital products, interactive experiences, experimental tools, and creative systems. From client platforms and games to branded ecosystems and rapid prototypes, I focus on shipping ideas that are functional, scalable, and alive.</p>
+                <div class="cta-buttons" aria-label="Primary actions">
+                    <a href="#projects" class="btn btn-primary">Explore Projects</a>
+                    <a href="#experiments" class="btn btn-secondary">Current Experiments</a>
+                    <a href="#content" class="btn btn-ghost">Watch The Journey</a>
+                </div>
+            </div>
+            <div class="hero-panel" aria-label="Current building snapshot">
+                <div class="panel-topline">
+                    <span>Live ecosystem</span>
+                    <span>2026</span>
+                </div>
+                <div class="focus-stack">
+                    <div>
+                        <span class="focus-label">Products</span>
+                        <strong>OpenPlate, dashboards, AI workflow systems</strong>
+                    </div>
+                    <div>
+                        <span class="focus-label">Experiences</span>
+                        <strong>Art Xperiences, birthday builds, interactive moments</strong>
+                    </div>
+                    <div>
+                        <span class="focus-label">Games</span>
+                        <strong>Space Dash, Death Tag, Unity prototypes</strong>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hero-highlights" aria-label="Portfolio highlights">
+    </header>
+
+    <main>
+        <section class="metrics-strip" aria-label="Momentum metrics">
             <div>
                 <strong>4+</strong>
                 <span>client and web builds delivered</span>
@@ -101,24 +126,22 @@
                 <strong>7.9K+</strong>
                 <span>views across build and review content</span>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <main>
         <section id="projects">
             <div class="section-heading">
                 <p class="eyebrow">Featured work</p>
-                <h2 class="section-title">Projects with clear purpose.</h2>
-                <p class="section-subtitle">A focused portfolio of products, experiences, games, and AI-assisted systems.</p>
+                <h2 class="section-title">Organized by identity, not chronology.</h2>
+                <p class="section-subtitle">A portfolio of products, experiences, games, and experiments that shows range, iteration, and execution.</p>
             </div>
 
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-media project-media-image">
+            <div class="bento-grid project-bento">
+                <article class="project-card featured-card">
+                    <div class="project-image product-preview">
                         <img src="images/spacedash.png" alt="Space Dash logo">
                     </div>
                     <div class="project-content">
-                        <span class="category-label">Game</span>
+                        <span class="category-label">Games</span>
                         <h3 class="project-title">Space Dash</h3>
                         <p class="project-description">A published mobile space shooter with asteroid dodging mechanics, ongoing story expansion, and real Google Play release experience.</p>
                         <div class="project-tags">
@@ -127,14 +150,15 @@
                             <span class="tag">Mobile</span>
                             <span class="tag">Published</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" class="project-link" target="_blank" rel="noopener">View on Play Store</a>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" class="project-link" target="_blank" rel="noopener">View on Play Store</a>
+                        </div>
                     </div>
                 </article>
 
                 <article class="project-card">
-                    <div class="project-media"><i class="fa-solid fa-utensils"></i></div>
                     <div class="project-content">
-                        <span class="category-label">Product</span>
+                        <span class="category-label">Products</span>
                         <h3 class="project-title">OpenPlate</h3>
                         <p class="project-description">A research-led food experiment system exploring practical utility, content, data capture, and productized workflows.</p>
                         <div class="project-tags">
@@ -146,9 +170,8 @@
                 </article>
 
                 <article class="project-card">
-                    <div class="project-media"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                     <div class="project-content">
-                        <span class="category-label">Experience</span>
+                        <span class="category-label">Experiences</span>
                         <h3 class="project-title">Art Xperiences</h3>
                         <p class="project-description">Interactive branded experiences for personal moments, emotional storytelling, and playful web-based delivery.</p>
                         <div class="project-tags">
@@ -160,9 +183,8 @@
                 </article>
 
                 <article class="project-card">
-                    <div class="project-media"><i class="fa-solid fa-arrows-down-to-people"></i></div>
                     <div class="project-content">
-                        <span class="category-label">Game</span>
+                        <span class="category-label">Games</span>
                         <h3 class="project-title">Death Tag</h3>
                         <p class="project-description">A P2P laser tag-inspired mobile game in development, exploring multiplayer mechanics and real-time gameplay.</p>
                         <div class="project-tags">
@@ -170,16 +192,17 @@
                             <span class="tag">C#</span>
                             <span class="tag">Multiplayer</span>
                         </div>
-                        <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener">View on Play Store</a>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener">View on Play Store</a>
+                        </div>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="project-media"><i class="fa-solid fa-comments"></i></div>
+                <article class="project-card wide-card">
                     <div class="project-content">
-                        <span class="category-label">AI system</span>
+                        <span class="category-label">AI systems</span>
                         <h3 class="project-title">MyTelkom App Enhancement</h3>
-                        <p class="project-description">A Telkom 10X Hackathon build with AI interactions, text-to-speech, and speech-to-text after a rapid Unity-to-React pivot.</p>
+                        <p class="project-description">A Telkom 10X Hackathon build that enhanced a service app concept with AI interactions, text-to-speech, and speech-to-text after a rapid Unity-to-React pivot.</p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">AI</span>
@@ -188,57 +211,37 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="project-card">
-                    <div class="project-media"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="project-content">
-                        <span class="category-label">Product</span>
-                        <h3 class="project-title">Dashboards and workflow tools</h3>
-                        <p class="project-description">Small utility systems for planning, tracking, organizing content, and turning repeated tasks into repeatable workflows.</p>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Systems</span>
-                            <span class="tag">Workflow</span>
-                        </div>
-                    </div>
-                </article>
             </div>
         </section>
 
         <section id="experiments">
-            <div class="section-heading">
-                <p class="eyebrow">Active experiments</p>
-                <h2 class="section-title">Ideas currently in motion.</h2>
-                <p class="section-subtitle">Prototypes, workflow systems, UI concepts, and creative tooling stay visible while they evolve.</p>
+            <div class="section-heading split-heading">
+                <div>
+                    <p class="eyebrow">Active experiments</p>
+                    <h2 class="section-title">A living lab for ideas in motion.</h2>
+                </div>
+                <p class="section-subtitle">This is where prototypes, workflow systems, UI concepts, and creative tooling stay visible while they evolve.</p>
             </div>
-            <div class="timeline-list">
-                <article class="timeline-item">
+            <div class="experiment-grid">
+                <article class="experiment-card">
                     <span class="status-pill">Researching</span>
-                    <div>
-                        <h3>OpenPlate research system</h3>
-                        <p>Testing how food research, personal experiments, repeatable templates, and content can become one practical product loop.</p>
-                    </div>
+                    <h3>OpenPlate research system</h3>
+                    <p>Testing how food research, personal experiments, repeatable templates, and content can become one practical product loop.</p>
                 </article>
-                <article class="timeline-item">
+                <article class="experiment-card">
                     <span class="status-pill">Prototyping</span>
-                    <div>
-                        <h3>AI workflow pipelines</h3>
-                        <p>Designing small automations for planning, ideation, dashboards, content support, and faster product iteration.</p>
-                    </div>
+                    <h3>AI workflow pipelines</h3>
+                    <p>Designing small automations for planning, ideation, dashboards, content support, and faster product iteration.</p>
                 </article>
-                <article class="timeline-item">
+                <article class="experiment-card">
                     <span class="status-pill">Active Build</span>
-                    <div>
-                        <h3>Content management dashboard</h3>
-                        <p>Exploring a lightweight command center for build logs, video planning, experiments, and recency signals.</p>
-                    </div>
+                    <h3>Content management dashboard</h3>
+                    <p>Exploring a lightweight command center for build logs, video planning, experiments, and recency signals.</p>
                 </article>
-                <article class="timeline-item">
+                <article class="experiment-card">
                     <span class="status-pill">Iterating</span>
-                    <div>
-                        <h3>Experimental UI systems</h3>
-                        <p>Testing responsive showcase cards and interaction patterns that make project work feel polished without hiding the build process.</p>
-                    </div>
+                    <h3>Experimental UI systems</h3>
+                    <p>Minimal bento layouts, responsive showcase cards, and interaction patterns that make project work feel like products.</p>
                 </article>
             </div>
         </section>
@@ -246,30 +249,30 @@
         <section id="client-work">
             <div class="section-heading">
                 <p class="eyebrow">Client work</p>
-                <h2 class="section-title">Built for real requirements.</h2>
-                <p class="section-subtitle">Client builds demonstrate trust, communication, iteration, and delivery beyond personal projects.</p>
+                <h2 class="section-title">Real-world execution for real requirements.</h2>
+                <p class="section-subtitle">Client builds demonstrate trust, communication, iteration, and the ability to deliver beyond personal projects.</p>
             </div>
-            <div class="case-study-list">
+            <div class="case-study-grid">
                 <article class="case-study-card">
-                    <div class="case-study-number">01</div>
-                    <div class="case-study-body">
-                        <span class="category-label">Business platform</span>
-                        <h3>MSL Hub</h3>
-                        <p>Developed a structured platform and web presence around practical business requirements, usability, responsive layout, and clean information architecture.</p>
+                    <div class="case-meta">
+                        <span>Business platform</span>
+                        <span>Responsive web</span>
                     </div>
-                    <dl class="case-study-details">
+                    <h3>MSL Hub</h3>
+                    <p>Developed a structured platform and web presence around practical business requirements, usability, responsive layout, and clean information architecture.</p>
+                    <dl>
                         <div><dt>Focus</dt><dd>Client requirements, iteration, usability</dd></div>
                         <div><dt>Outcome</dt><dd>Professional digital presence built for clarity and trust</dd></div>
                     </dl>
                 </article>
                 <article class="case-study-card">
-                    <div class="case-study-number">02</div>
-                    <div class="case-study-body">
-                        <span class="category-label">Service business</span>
-                        <h3>EWash</h3>
-                        <p>Designed and developed a service-business presence focused on mobile responsiveness, accessibility, service clarity, and customer confidence.</p>
+                    <div class="case-meta">
+                        <span>Service business</span>
+                        <span>Mobile-first</span>
                     </div>
-                    <dl class="case-study-details">
+                    <h3>EWash</h3>
+                    <p>Designed and developed a service-business presence focused on mobile responsiveness, accessibility, service clarity, and customer confidence.</p>
+                    <dl>
                         <div><dt>Focus</dt><dd>Responsive showcase, service flow, accessibility</dd></div>
                         <div><dt>Outcome</dt><dd>Practical user-facing experience for a local service brand</dd></div>
                     </dl>
@@ -277,19 +280,48 @@
             </div>
         </section>
 
-        <section id="content">
+        <section id="ecosystem">
             <div class="section-heading">
-                <p class="eyebrow">Content</p>
-                <h2 class="section-title">Public build logs and developer storytelling.</h2>
-                <p class="section-subtitle">Content documents decisions, experiments, lessons, and the founder trajectory in public.</p>
+                <p class="eyebrow">Ecosystem</p>
+                <h2 class="section-title">The work connects into two operating lanes.</h2>
+            </div>
+            <div class="ecosystem-grid">
+                <article class="ecosystem-card horizon-card">
+                    <span class="category-label">Horizon Synergy</span>
+                    <h3>Digital products and scalable systems.</h3>
+                    <p>OpenPlate, future AI integrations, dashboards, productivity tools, and platforms designed to grow beyond one-off builds.</p>
+                </article>
+                <article class="ecosystem-card cedric-card">
+                    <span class="category-label">Cedric Arts</span>
+                    <h3>Experiments, content, and creative technology.</h3>
+                    <p>Art Xperiences, YouTube devlogs, rapid prototypes, interface tests, game builds, and public documentation of the journey.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="content">
+            <div class="section-heading split-heading">
+                <div>
+                    <p class="eyebrow">Content</p>
+                    <h2 class="section-title">Public build logs and developer storytelling.</h2>
+                </div>
+                <p class="section-subtitle">Content is proof of execution: it documents decisions, experiments, lessons, and the founder trajectory in public.</p>
             </div>
 
-            <div class="content-stats">
-                <div><strong>383</strong><span>Subscribers</span></div>
-                <div><strong>7.9K+</strong><span>Total views</span></div>
-            </div>
+            <div class="youtube-grid">
+                <div class="channel-stats">
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <div class="stat-number">383</div>
+                            <div class="stat-label">Subscribers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">7.9K+</div>
+                            <div class="stat-label">Total Views</div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="video-grid">
                 <article class="video-card">
                     <div class="video-placeholder">
                         <iframe width="600" height="300" src="https://www.youtube.com/embed/JyRTcSV1mG4?si=f1GNN4bDqQ3X9-ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -320,10 +352,10 @@
         </section>
 
         <section id="about">
-            <div class="about-layout">
+            <div class="about-grid">
                 <div>
                     <p class="eyebrow">About</p>
-                    <h2 class="section-title">Grounded, experimental, builder-oriented.</h2>
+                    <h2 class="section-title align-left">Grounded, experimental, builder-oriented.</h2>
                 </div>
                 <div class="about-copy">
                     <p>I'm a South African developer and creative technologist focused on building digital products, interactive experiences, and experimental systems.</p>
@@ -338,7 +370,7 @@
                 <p class="eyebrow">Capabilities</p>
                 <h2 class="section-title">Tools for shipping across mediums.</h2>
             </div>
-            <div class="skills-grid">
+            <div class="skills-container">
                 <div class="skill-category">
                     <h3>Development</h3>
                     <ul class="skill-list">
@@ -434,7 +466,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 - 2026 Njabulo Cedric Mnisi. Built as a focused creative technology portfolio.</p>
+        <p>&copy; 2025 - 2026 Njabulo Cedric Mnisi. Built as a living digital ecosystem.</p>
         <p>Emalahleni, South Africa</p>
     </footer>
 
