@@ -32,10 +32,10 @@ themeToggles.forEach((toggle) => {
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
 
+    e.preventDefault();
     const offsetTop = target.offsetTop - 72;
     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
   });
@@ -52,7 +52,9 @@ const closeMobileNav = () => {
   mobileNav.classList.remove('open');
   mobileBackdrop.classList.remove('open');
   mobileNav.setAttribute('aria-hidden', 'true');
+  mobileNav.setAttribute('inert', '');
   navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Open navigation');
 };
 
 const openMobileNav = () => {
@@ -60,7 +62,9 @@ const openMobileNav = () => {
   mobileNav.classList.add('open');
   mobileBackdrop.classList.add('open');
   mobileNav.setAttribute('aria-hidden', 'false');
+  mobileNav.removeAttribute('inert');
   navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.setAttribute('aria-label', 'Close navigation');
 };
 
 if (navToggle && mobileNav && mobileBackdrop) {
@@ -75,8 +79,29 @@ if (navToggle && mobileNav && mobileBackdrop) {
   if (closeButton) closeButton.addEventListener('click', closeMobileNav);
 
   mobileNavLinks.forEach((link) => link.addEventListener('click', closeMobileNav));
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMobileNav();
+  });
 }
 
+// Click-to-play YouTube embeds keep heavy iframe scripts out of the initial page load.
+document.querySelectorAll('[data-youtube-id]').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    const videoId = button.getAttribute('data-youtube-id');
+    if (!videoId) return;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0`;
+    iframe.title = button.getAttribute('aria-label')?.replace('Play ', '') || 'YouTube video player';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.allowFullscreen = true;
+
+    button.replaceWith(iframe);
+  });
+});
 
 // Scroll reveal animations
 const revealTargets = document.querySelectorAll(
@@ -85,16 +110,47 @@ const revealTargets = document.querySelectorAll(
 
 revealTargets.forEach((el) => el.classList.add('reveal'));
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.16, rootMargin: '0px 0px -40px 0px' }
-);
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16, rootMargin: '0px 0px -40px 0px' }
+  );
 
-revealTargets.forEach((el) => revealObserver.observe(el));
+  revealTargets.forEach((el) => revealObserver.observe(el));
+} else {
+  revealTargets.forEach((el) => el.classList.add('is-visible'));
+}
+
+const loadScript = ({ src, async = true, defer = true, crossOrigin, type }) => {
+  const script = document.createElement('script');
+  script.src = src;
+  script.async = async;
+  script.defer = defer;
+  if (crossOrigin) script.crossOrigin = crossOrigin;
+  if (type) script.type = type;
+  document.head.appendChild(script);
+};
+
+const loadThirdPartyScripts = () => {
+  loadScript({
+    src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6841184836474681',
+    crossOrigin: 'anonymous'
+  });
+  loadScript({ src: 'https://apis.google.com/js/platform.js' });
+  loadScript({ src: 'https://platform.linkedin.com/badges/js/profile.js', type: 'text/javascript' });
+};
+
+window.addEventListener('load', () => {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadThirdPartyScripts, { timeout: 3500 });
+  } else {
+    window.setTimeout(loadThirdPartyScripts, 1500);
+  }
+});
