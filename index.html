@@ -6,8 +6,6 @@
 
     <title>Njabulo Cedric Mnisi | Software & Game Development Portfolio</title>
     <meta name="description" content="Cedric Arts portfolio featuring software projects, game development work, certifications, and contact information.">
-    <meta name="keywords" content="Njabulo Cedric Mnsis, Cedric Arts, software developer portfolio, game developer portfolio, web development, South Africa">
-    <meta name="author" content="Cedric Arts">
     <meta name="author" content="Njabulo Cedric Mnisi">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://cedricarts.netlify.app/">
@@ -15,39 +13,34 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cedric Arts | Software & Game Development Portfolio">
     <meta property="og:description" content="Explore Cedric Arts projects, skills, certifications, and contact details.">
-    <meta property="og:url" content="https://cedricarts.github.io/">
+    <meta property="og:url" content="https://cedricarts.netlify.app/">
     <meta property="og:site_name" content="Cedric Arts">
-    <meta property="og:image" content="https://cedricarts.github.io/ca-logo.png">
+    <meta property="og:image" content="https://cedricarts.netlify.app/ca-logo.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Cedric Arts | Software & Game Development Portfolio">
     <meta name="twitter:description" content="Explore Njabulo Cedric Mnisi's projects, skills, certifications, and contact details.">
-    <meta name="twitter:image" content="https://cedricarts.github.io/ca-logo.png">
+    <meta name="twitter:image" content="https://cedricarts.netlify.app/ca-logo.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Cedric Arts",
-            "url": "https://cedricarts.nelify.app/"
+            "url": "https://cedricarts.netlify.app/"
         }
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6841184836474681"
-     crossorigin="anonymous"></script>
-     <meta name="google-adsense-account" content="ca-pub-6841184836474681">
+    <meta name="google-adsense-account" content="ca-pub-6841184836474681">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/c487386ab7.js" crossorigin="anonymous"></script>
-    <script src="https://apis.google.com/js/platform.js"></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Navigation -->
-    <nav>
+    <header class="site-header">
+    <nav aria-label="Primary navigation">
         <div class="nav-container">
             <div class="logo">Cedric Arts</div>
-            <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -56,10 +49,19 @@
                 <li><a href="#youtube">Content</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>Dark</button>
+                <button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
         </div>
-        <div class="mobile-nav" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-nav" id="mobile-menu" aria-hidden="true" aria-label="Mobile navigation" inert>
             <button class="mobile-nav-close" type="button" aria-label="Close navigation">✕</button>
             <div class="mobile-nav-links">
+                <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>Dark</button>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
@@ -70,11 +72,13 @@
         </div>
         <div class="mobile-nav-backdrop" data-mobile-nav-backdrop></div>
     </nav>
+    </header>
 
+    <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
-            <h1>Njabulo Cedric Mnisi</h1>
+            <h1 id="hero-title">Njabulo Cedric Mnisi</h1>
             <div class="subtitle">Software & Game Developer</div>
             <p>Building games, web applications, and digital experiences. Founder of Horizon Synergy with a passion for creating products that ship.</p>
             <div class="cta-buttons">
@@ -88,11 +92,11 @@
     <section id="about">
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">Tech entrepreneur and developer specializing in game development and front-end web development</p>
-        <div style="max-width: 800px; margin: 0 auto; text-align: center; color: var(--gray);">
-            <p style="margin-bottom: 1rem;">
+        <div class="about-copy">
+            <p>
                 I'm a college student and aspiring software engineer with hands-on experience in game development, web development, and content creation. I founded Horizon Synergy, a startup tech company focused on game development and sustainable digital solutions.
             </p>
-            <p style="margin-bottom: 1rem;">
+            <p>
                 I've published Space Dash on the Google Play Store, completed multiple client web development projects, and participated in the Telkom 10X Hackathon. I'm currently pursuing my IT & Computer Science degree while actively building projects and learning new technologies.
             </p>
             <p>
@@ -121,7 +125,7 @@
                         <span class="tag">Published</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" class="project-link" target="_blank">Play Store →</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" class="project-link" target="_blank" rel="noopener noreferrer">Play Store →</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +145,7 @@
                         <span class="tag">In Progress</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank">Play Store →</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener noreferrer">Play Store →</a>
                     </div>
                 </div>
             </div>
@@ -242,56 +246,56 @@
                 <h3 class="cert-title">JavaScript Algorithms and Data Structures</h3>
                 <div class="cert-issuer">freeCodeCamp</div>
                 <div class="cert-date">April 2025 • 300+ hours</div>
-                <a href="https://www.freecodecamp.org/certification/cedric_arts/javascript-algorithms-and-data-structures-v8" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.freecodecamp.org/certification/cedric_arts/javascript-algorithms-and-data-structures-v8" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
             <div class="cert-card">
                 <h3 class="cert-title">Responsive Web Design</h3>
                 <div class="cert-issuer">freeCodeCamp</div>
                 <div class="cert-date">February 2025 • 300+ hours</div>
-                <a href="https://www.freecodecamp.org/certification/cedric_arts/responsive-web-design" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.freecodecamp.org/certification/cedric_arts/responsive-web-design" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
             <div class="cert-card">
                 <h3 class="cert-title">Introduction to Generative AI</h3>
                 <div class="cert-issuer">Google/Coursera</div>
                 <div class="cert-date">January 2024</div>
-                <a href="https://www.coursera.org/account/accomplishments/certificate/H3HMNKRLUPB7" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.coursera.org/account/accomplishments/certificate/H3HMNKRLUPB7" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
             <div class="cert-card">
                 <h3 class="cert-title">Introduction to Python</h3>
                 <div class="cert-issuer">Coddy.tech</div>
                 <div class="cert-date">October 2025</div>
-                <a href="https://coddy.tech/certifications/yoX9i7-dMHj5s" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://coddy.tech/certifications/yoX9i7-dMHj5s" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
             <div class="cert-card">
                 <h3 class="cert-title">Effective Business Websites</h3>
                 <div class="cert-issuer">HP Life</div>
                 <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/d1ffc791-b115-4dc1-ae1b-5a131af30c83" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.life-global.org/certificate/d1ffc791-b115-4dc1-ae1b-5a131af30c83" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
             <div class="cert-card">
                 <h3 class="cert-title">IT For Business Success</h3>
                 <div class="cert-issuer">HP Life</div>
                 <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/867300af-d50a-4937-954c-1f15114bd457" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.life-global.org/certificate/867300af-d50a-4937-954c-1f15114bd457" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
             <div class="cert-card">
                 <h3 class="cert-title">AI For Beginners</h3>
                 <div class="cert-issuer">HP Life</div>
                 <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/a5f1be4c-6574-476c-b38f-7a676c566d86" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.life-global.org/certificate/a5f1be4c-6574-476c-b38f-7a676c566d86" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
 
              <div class="cert-card">
                 <h3 class="cert-title">Finding Funding</h3>
                 <div class="cert-issuer">HP Life</div>
                 <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/9a4fcef2-a45e-499e-8304-fa74fd9a1526" class="cert-link" target="_blank">View Certificate →</a>
+                <a href="https://www.life-global.org/certificate/9a4fcef2-a45e-499e-8304-fa74fd9a1526" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
         </div>
     </section>
@@ -317,87 +321,91 @@
         <div class="youtube-grid">
             <div class="video-card">
                 <div class="video-placeholder">
-                    <iframe width="600" height="300" src="https://www.youtube.com/embed/JyRTcSV1mG4?si=f1GNN4bDqQ3X9-ll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="youtube-lite" href="https://www.youtube.com/watch?v=JyRTcSV1mG4" target="_blank" rel="noopener noreferrer" data-youtube-id="JyRTcSV1mG4" aria-label="Play Game Development Devlogs video">
+                        <img src="https://i.ytimg.com/vi/JyRTcSV1mG4/hqdefault.jpg" alt="Game Development Devlogs video thumbnail" loading="lazy" width="480" height="360">
+                        <span class="play-button" aria-hidden="true"></span>
+                    </a>
                 </div>
                 <div class="video-info">
-                    <div class="video-title">Game Development Devlogs</div>
-                    <p style="color: var(--gray); font-size: 0.9rem;">Behind-the-scenes content showcasing the development process of Space Dash and other projects.</p>
+                    <h3 class="video-title">Game Development Devlogs</h3>
+                    <p>Behind-the-scenes content showcasing the development process of Space Dash and other projects.</p>
                 </div>
             </div>
 
             <div class="video-card">
                 <div class="video-placeholder">
-                    <iframe width="600" height="300" src="https://www.youtube.com/embed/DJvmzeK40hs?si=oDW3gd0vOekjF_UF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <a class="youtube-lite" href="https://www.youtube.com/watch?v=DJvmzeK40hs" target="_blank" rel="noopener noreferrer" data-youtube-id="DJvmzeK40hs" aria-label="Play Indie Game Reviews video">
+                        <img src="https://i.ytimg.com/vi/DJvmzeK40hs/hqdefault.jpg" alt="Indie Game Reviews video thumbnail" loading="lazy" width="480" height="360">
+                        <span class="play-button" aria-hidden="true"></span>
+                    </a>
                 </div>
                 <div class="video-info">
-                    <div class="video-title">Indie Game Reviews</div>
-                    <p style="color: var(--gray); font-size: 0.9rem;">Critical analysis and reviews of indie games from platforms like itch.io, providing developer perspectives.</p>
+                    <h3 class="video-title">Indie Game Reviews</h3>
+                    <p>Critical analysis and reviews of indie games from platforms like itch.io, providing developer perspectives.</p>
                 </div>
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://www.youtube.com/@Cedric_Arts" class="btn btn-primary" target="_blank">Visit Channel</a>
+        <div class="section-action">
+            <a href="https://www.youtube.com/@Cedric_Arts" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Channel</a>
         </div>
 
-        
-
-<div class="g-ytsubscribe" data-channelid="UCJSndzlnCHrw2P1lIUSkexg" data-layout="full" data-theme="dark" data-count="default"></div>
+        <div class="youtube-subscribe">
+            <div class="g-ytsubscribe" data-channelid="UCJSndzlnCHrw2P1lIUSkexg" data-layout="full" data-theme="dark" data-count="default"></div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-content">
-            <p style="color: var(--gray); margin-bottom: 2rem;">
+            <p class="contact-intro">
                 I'm currently seeking opportunities in software development, game development, and web development. Let's connect!
             </p>
             
             <!-- LinkedIn Badge -->
-            <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+            <div class="linkedin-card">
                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="njabulo-cedric-mnisi" data-version="v1">
-                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/njabulo-cedric-mnisi?trk=profile-badge" style="text-decoration: none; color: var(--primary); font-weight: 600;">View LinkedIn Profile</a>
+                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/njabulo-cedric-mnisi?trk=profile-badge">View LinkedIn Profile</a>
                 </div>
             </div>
             
             <div class="contact-links">
                 <a href="mailto:cedricmnisi01@gmail.com" class="contact-link">
-                    <div class="contact-icon"><i class="fa-solid fa-inbox"></i></div>
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" role="img" aria-label="Email icon"><path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.4-.95 6.6 5.2 6.6-5.2a1.2 1.2 0 0 0-.35-.05H5.75c-.12 0-.24.02-.35.05Zm13.85 2.1-6.47 5.1a1.25 1.25 0 0 1-1.56 0L4.75 7.9v9.35c0 .55.45 1 1 1h12.5c.55 0 1-.45 1-1V7.9Z"/></svg></div>
                     <div>Email</div>
                 </a>
                 
-                <a href="https://github.com/cedricarts" class="contact-link" target="_blank">
-                    <div class="contact-icon"><i class="fa-brands fa-github-alt"></i></div>
+                <a href="https://github.com/cedricarts" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" role="img" aria-label="GitHub icon"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.2-3.37-1.2-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.82.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0 1 12 5.98c.85 0 1.7.11 2.5.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></div>
                     <div>GitHub</div>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/njabulo-cedric-mnisi" class="contact-link" target="_blank">
-                    <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <a href="https://www.linkedin.com/in/njabulo-cedric-mnisi" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" role="img" aria-label="LinkedIn icon"><path d="M6.94 8.85H3.75V20h3.19V8.85ZM5.34 7.32a1.85 1.85 0 1 0 0-3.7 1.85 1.85 0 0 0 0 3.7ZM20.25 20h-3.18v-5.42c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.86V20h-3.18V8.85h3.05v1.52h.04c.42-.8 1.46-1.65 3-1.65 3.21 0 3.8 2.11 3.8 4.86V20h.34Z"/></svg></div>
                     <div>LinkedIn</div>
                 </a>
                 
-                <a href="https://cedric-arts.itch.io" class="contact-link" target="_blank">
-                    <div class="contact-icon"><i class="fa-brands fa-itch-io"></i></div>
+                <a href="https://cedric-arts.itch.io" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <div class="contact-icon"><svg viewBox="0 0 24 24" role="img" aria-label="Itch.io icon"><path d="M4.2 4h15.6l1.2 4.35c-.46 1.05-1.32 1.73-2.4 1.73-1.04 0-1.86-.61-2.33-1.56-.46.95-1.29 1.56-2.32 1.56-1.04 0-1.87-.61-2.33-1.56-.47.95-1.29 1.56-2.33 1.56s-1.86-.61-2.33-1.56c-.46.95-1.29 1.56-2.33 1.56-1.08 0-1.94-.68-2.4-1.73L4.2 4Zm2.1 7.26c.74 0 1.4-.28 1.93-.78.53.5 1.2.78 1.95.78.74 0 1.41-.28 1.94-.78.53.5 1.2.78 1.95.78.74 0 1.41-.28 1.94-.78.53.5 1.19.78 1.93.78.35 0 .7-.06 1.02-.18V17.6A2.4 2.4 0 0 1 16.56 20H7.44a2.4 2.4 0 0 1-2.4-2.4v-6.52c.32.12.66.18 1.02.18Zm3.05 2.2v3.24h5.3v-3.24h-5.3Z"/></svg></div>
                     <div>Itch.io</div>
                 </a>
             </div>
             
-            <div style="margin-top: 3rem;">
+            <div class="section-action">
                 <a href="cedric_mnisi_resume.pdf" class="btn btn-primary">Download Resume</a>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer>
+    <footer class="site-footer">
         <p>&copy; 2025 - 2026 Njabulo Cedric Mnisi. Built with passion and code.</p>
-        <p style="margin-top: 0.5rem; opacity: 0.7;">Emalahleni, South Africa</p>
+        <p class="footer-location">Emalahleni, South Africa</p>
     </footer>
 
-    <!-- LinkedIn Badge Script -->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
-    <script src="script.js">
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
