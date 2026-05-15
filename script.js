@@ -14,10 +14,6 @@ const applyTheme = (theme) => {
   themeToggles.forEach((toggle) => {
     toggle.textContent = theme === 'dark' ? 'Dark' : 'Light';
   });
-
-  document.querySelectorAll('.g-ytsubscribe').forEach((widget) => {
-    widget.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'default');
-  });
 };
 
 applyTheme(getInitialTheme());
@@ -29,22 +25,11 @@ themeToggles.forEach((toggle) => {
   });
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (!target) return;
-
-    const offsetTop = target.offsetTop - 72;
-    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-  });
-});
-
-// Mobile navigation toggle
 const navToggle = document.querySelector('.nav-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
 const mobileBackdrop = document.querySelector('[data-mobile-nav-backdrop]');
-const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+const closeButton = document.querySelector('.mobile-nav-close');
+const mobileLinks = document.querySelectorAll('.mobile-nav a');
 
 const closeMobileNav = () => {
   if (!mobileNav || !mobileBackdrop || !navToggle) return;
@@ -68,36 +53,125 @@ const openMobileNav = () => {
 
 if (navToggle && mobileNav && mobileBackdrop) {
   navToggle.addEventListener('click', () => {
-    const isOpen = mobileNav.classList.contains('open');
-    isOpen ? closeMobileNav() : openMobileNav();
+    mobileNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
   });
 
   mobileBackdrop.addEventListener('click', closeMobileNav);
-
-  const closeButton = document.querySelector('.mobile-nav-close');
-  if (closeButton) closeButton.addEventListener('click', closeMobileNav);
-
-  mobileNavLinks.forEach((link) => link.addEventListener('click', closeMobileNav));
+  closeButton?.addEventListener('click', closeMobileNav);
+  mobileLinks.forEach((link) => link.addEventListener('click', closeMobileNav));
 }
 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (event) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (!target) return;
 
-// Scroll reveal animations
-const revealTargets = document.querySelectorAll(
-  'section .section-title, section .section-subtitle, .project-card, .skill-category, .cert-card, .video-card, .channel-stats, .contact-links, footer p'
-);
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 
-revealTargets.forEach((el) => el.classList.add('reveal'));
+const cursorGlow = document.querySelector('[data-cursor-glow]');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
+if (cursorGlow && !reducedMotion.matches) {
+  window.addEventListener('pointermove', (event) => {
+    document.documentElement.style.setProperty('--cursor-x', `${event.clientX}px`);
+    document.documentElement.style.setProperty('--cursor-y', `${event.clientY}px`);
+  }, { passive: true });
+}
+
+const revealTargets = document.querySelectorAll('.reveal');
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
         revealObserver.unobserve(entry.target);
       }
     });
-  },
-  { threshold: 0.16, rootMargin: '0px 0px -40px 0px' }
-);
+  }, { threshold: 0.16, rootMargin: '0px 0px -50px 0px' });
 
-revealTargets.forEach((el) => revealObserver.observe(el));
+  revealTargets.forEach((target) => revealObserver.observe(target));
+} else {
+  revealTargets.forEach((target) => target.classList.add('is-visible'));
+}
+
+const projectDetails = {
+  'space-dash': {
+    kicker: 'Shipped mobile game',
+    title: 'Space Dash',
+    description: 'A compact arcade game built and shipped to Google Play. The project demonstrates production follow-through: gameplay, store assets, publishing, and iteration after release.',
+    points: ['Built with Unity and C# for mobile play.', 'Focused on quick-session arcade pacing.', 'Published publicly through Google Play Console.']
+  },
+  openplate: {
+    kicker: 'Product research',
+    title: 'OpenPlate',
+    description: 'A practical food-product experiment: part research board, part content pipeline, part workflow prototype for testing recipes and usefulness.',
+    points: ['Organizes ideas into repeatable experiments.', 'Prioritizes utility and clear documentation.', 'Designed as a small product system that can grow through use.']
+  },
+  'death-tag': {
+    kicker: 'Game prototype',
+    title: 'Death Tag',
+    description: 'A mobile game concept inspired by laser tag. The artifact explores player feedback, fast rounds, and multiplayer-feeling interaction patterns.',
+    points: ['Unity and C# gameplay implementation.', 'Prototype focus on feedback loops and round structure.', 'Built around a clear, easy-to-understand game premise.']
+  },
+  mytelkom: {
+    kicker: 'Hackathon artifact',
+    title: 'MyTelkom App Enhancement',
+    description: 'A Telkom 10X Hackathon build produced under time pressure, including a Unity-to-React pivot and experiments with speech interfaces.',
+    points: ['React interface built during a rapid sprint.', 'Explored text-to-speech and speech-to-text service flows.', 'Team delivery under hackathon constraints.']
+  },
+  'client-web': {
+    kicker: 'Client interfaces',
+    title: 'Web build practice',
+    description: 'A set of practical web builds focused on clean presentation, responsive structure, and direct communication for clients and collaborators.',
+    points: ['Semantic HTML, CSS, and JavaScript implementation.', 'Responsive layouts tuned for mobile first.', 'Delivery mindset: clear pages, accessible links, and maintainable structure.']
+  }
+};
+
+const modal = document.querySelector('[data-project-modal]');
+const modalTitle = document.querySelector('[data-modal-title]');
+const modalKicker = document.querySelector('[data-modal-kicker]');
+const modalDescription = document.querySelector('[data-modal-description]');
+const modalList = document.querySelector('[data-modal-list]');
+const modalClose = document.querySelector('[data-modal-close]');
+let lastFocusedElement;
+
+const closeModal = () => {
+  if (!modal?.open) return;
+  modal.close();
+  document.body.classList.remove('modal-open');
+  lastFocusedElement?.focus();
+};
+
+const openModal = (projectKey) => {
+  const detail = projectDetails[projectKey];
+  if (!modal || !detail) return;
+
+  lastFocusedElement = document.activeElement;
+  modalKicker.textContent = detail.kicker;
+  modalTitle.textContent = detail.title;
+  modalDescription.textContent = detail.description;
+  modalList.replaceChildren(...detail.points.map((point) => {
+    const item = document.createElement('li');
+    item.textContent = point;
+    return item;
+  }));
+
+  modal.showModal();
+  document.body.classList.add('modal-open');
+};
+
+document.querySelectorAll('[data-modal-target]').forEach((button) => {
+  button.addEventListener('click', () => openModal(button.dataset.modalTarget));
+});
+
+modalClose?.addEventListener('click', closeModal);
+modal?.addEventListener('click', (event) => {
+  if (event.target === modal) closeModal();
+});
+modal?.addEventListener('cancel', () => {
+  document.body.classList.remove('modal-open');
+});

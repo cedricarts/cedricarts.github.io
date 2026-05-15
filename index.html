@@ -4,50 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Njabulo Cedric Mnisi | Software & Game Development Portfolio</title>
-    <meta name="description" content="Cedric Arts portfolio featuring software projects, game development work, certifications, and contact information.">
+    <title>Cedric Arts | Creative Technologist Portfolio</title>
+    <meta name="description" content="Cedric Arts is the portfolio of Njabulo Cedric Mnisi: games, web builds, prototypes, and visual experiments from a creative technologist.">
     <meta name="author" content="Njabulo Cedric Mnisi">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://cedricarts.netlify.app/">
     <link rel="icon" href="images/ca-logo.png" type="image/png">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Cedric Arts | Software & Game Development Portfolio">
-    <meta property="og:description" content="Explore Cedric Arts projects, skills, certifications, and contact details.">
+    <meta property="og:title" content="Cedric Arts | Creative Technologist Portfolio">
+    <meta property="og:description" content="A visual-first portfolio of games, prototypes, client websites, and development artifacts by Njabulo Cedric Mnisi.">
     <meta property="og:url" content="https://cedricarts.netlify.app/">
     <meta property="og:site_name" content="Cedric Arts">
-    <meta property="og:image" content="https://cedricarts.netlify.app/ca-logo.png">
+    <meta property="og:image" content="https://cedricarts.netlify.app/images/ca-logo.png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Cedric Arts | Software & Game Development Portfolio">
-    <meta name="twitter:description" content="Explore Njabulo Cedric Mnisi's projects, skills, certifications, and contact details.">
-    <meta name="twitter:image" content="https://cedricarts.netlify.app/ca-logo.png">
+    <meta name="twitter:title" content="Cedric Arts | Creative Technologist Portfolio">
+    <meta name="twitter:description" content="Games, prototypes, client websites, and creative development artifacts by Njabulo Cedric Mnisi.">
+    <meta name="twitter:image" content="https://cedricarts.netlify.app/images/ca-logo.png">
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Cedric Arts",
-            "url": "https://cedricarts.netlify.app/"
+            "@type": "Person",
+            "name": "Njabulo Cedric Mnisi",
+            "alternateName": "Cedric Arts",
+            "url": "https://cedricarts.netlify.app/",
+            "jobTitle": "Software and Game Developer",
+            "sameAs": [
+                "https://github.com/cedricarts",
+                "https://www.linkedin.com/in/njabulo-cedric-mnisi",
+                "https://cedric-arts.itch.io",
+                "https://www.youtube.com/@Cedric_Arts"
+            ]
         }
     </script>
     <meta name="google-adsense-account" content="ca-pub-6841184836474681">
     <link rel="preconnect" href="https://i.ytimg.com">
-    <link rel="preconnect" href="https://www.youtube-nocookie.com">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
-    <!-- Navigation -->
+    <div class="ambient-field" aria-hidden="true">
+        <span class="orb orb-one"></span>
+        <span class="orb orb-two"></span>
+        <span class="orb orb-three"></span>
+        <span class="cursor-glow" data-cursor-glow></span>
+    </div>
+
     <header class="site-header">
-    <nav aria-label="Primary navigation">
-        <div class="nav-container">
-            <div class="logo">Cedric Arts</div>
+        <nav class="nav-container" aria-label="Primary navigation">
+            <a class="logo" href="#top" aria-label="Cedric Arts home">
+                <img src="images/ca-logo.png" alt="" width="34" height="34">
+                <span>Cedric Arts</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experiments">Experiments</a></li>
-                <li><a href="#client-work">Client Work</a></li>
-                <li><a href="#content">Content</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#lab">Lab</a></li>
+                <li><a href="#stack">Stack</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-controls">
@@ -58,335 +71,191 @@
                     <span></span>
                 </button>
             </div>
-        </div>
-        <div class="mobile-nav" id="mobile-menu" aria-hidden="true" aria-label="Mobile navigation" inert>
-            <button class="mobile-nav-close" type="button" aria-label="Close navigation">✕</button>
-            <div class="mobile-nav-links">
-                <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>Dark</button>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#experiments">Experiments</a>
-                <a href="#client-work">Client Work</a>
-                <a href="#content">Content</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
+        </nav>
+        <div class="mobile-nav" id="mobile-menu" aria-hidden="true" inert>
+            <button class="mobile-nav-close" type="button" aria-label="Close navigation">×</button>
+            <a href="#work">Work</a>
+            <a href="#lab">Lab</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Contact</a>
         </div>
         <div class="mobile-nav-backdrop" data-mobile-nav-backdrop></div>
-    </nav>
     </header>
 
     <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-            <h1 id="hero-title">Njabulo Cedric Mnisi</h1>
-            <div class="subtitle">Software & Game Developer</div>
-            <p>Building games, web applications, and digital experiences. Founder of Horizon Synergy with a passion for creating products that ship.</p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Creative technologist · Games · Web · Prototypes</p>
+                <h1 id="hero-title">Building visual software artifacts that move, teach, and ship.</h1>
+                <p class="hero-intro">I’m Njabulo Cedric Mnisi — a software and game developer turning small ideas into playable products, client websites, research builds, and process-led content.</p>
+                <div class="cta-buttons">
+                    <a href="#work" class="btn btn-primary">Explore the grid</a>
+                    <a href="cedric_mnisi_resume.pdf" class="btn btn-secondary">Resume</a>
+                </div>
             </div>
-        </div>
-    </header>
+            <aside class="hero-panel reveal" aria-label="Current portfolio snapshot">
+                <div class="signal-card signal-main">
+                    <span class="signal-dot"></span>
+                    <strong>Active build mode</strong>
+                    <p>Mobile games, web interfaces, and practical experiments.</p>
+                </div>
+                <div class="mini-grid" aria-label="Portfolio metrics">
+                    <div><strong>01</strong><span>Play Store release</span></div>
+                    <div><strong>10X</strong><span>Hackathon build</span></div>
+                    <div><strong>300h+</strong><span>freeCodeCamp JS</span></div>
+                    <div><strong>378+</strong><span>YouTube community</span></div>
+                </div>
+            </aside>
+        </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">Tech entrepreneur and developer specializing in game development and front-end web development</p>
-        <div class="about-copy">
-            <p>
-                I'm a college student and aspiring software engineer with hands-on experience in game development, web development, and content creation. I founded Horizon Synergy, a startup tech company focused on game development and sustainable digital solutions.
-            </p>
-            <p>
-                I've published Space Dash on the Google Play Store, completed multiple client web development projects, and participated in the Telkom 10X Hackathon. I'm currently pursuing my IT & Computer Science degree while actively building projects and learning new technologies.
-            </p>
-            <p>
-                When I'm not coding, I create content on YouTube sharing devlogs and indie game reviews with a community of 378+ subscribers.
-            </p>
-        </div>
-    </section>
+        <section class="intro-strip" aria-label="About Cedric Arts">
+            <p>Less pitch deck, more proof: shipped games, client interfaces, visual systems, and documented experiments from a developer still close to the craft.</p>
+        </section>
 
-            <div class="bento-grid project-bento">
-                <article class="project-card featured-card">
-                    <div class="project-image product-preview">
-                        <img src="images/spacedash.png" alt="Space Dash logo">
-                    </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" class="project-link" target="_blank" rel="noopener noreferrer">Play Store →</a>
-                    </div>
-                </article>
+        <section class="portfolio-section" id="work" aria-labelledby="work-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Selected artifacts</p>
+                <h2 id="work-title">A bento gallery of shipped work and prototypes.</h2>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="category-label">Products</span>
-                        <h3 class="project-title">OpenPlate</h3>
-                        <p class="project-description">A research-led food experiment system exploring practical utility, content, data capture, and productized workflows.</p>
-                        <div class="project-tags">
-                            <span class="tag">Research</span>
-                            <span class="tag">Product System</span>
-                            <span class="tag">Active Build</span>
-                        </div>
+            <div class="bento-grid">
+                <article class="bento-card project-card feature-card tone-space reveal" data-project-card>
+                    <div class="card-media framed-media">
+                        <img src="images/spacedash.png" alt="Space Dash mobile game artwork" loading="lazy" width="640" height="420">
                     </div>
-                    <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener noreferrer">Play Store →</a>
+                    <div class="card-content">
+                        <p class="card-kicker">Shipped mobile game</p>
+                        <h3>Space Dash</h3>
+                        <p>A fast arcade runner built for mobile, published on Google Play as a compact, playable proof of execution.</p>
+                        <div class="tag-row"><span>Unity</span><span>C#</span><span>Google Play</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button type="button" class="text-button" data-modal-target="space-dash">Open notes</button>
+                        <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" target="_blank" rel="noopener noreferrer">Play Store</a>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <span class="category-label">Games</span>
-                        <h3 class="project-title">Death Tag</h3>
-                        <p class="project-description">A P2P laser tag-inspired mobile game in development, exploring multiplayer mechanics and real-time gameplay.</p>
-                        <div class="project-tags">
-                            <span class="tag">Unity</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">Multiplayer</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener">View on Play Store</a>
-                        </div>
+                <article class="bento-card project-card tall-card tone-lime reveal" data-project-card>
+                    <div class="artifact-mark">OP</div>
+                    <div class="card-content">
+                        <p class="card-kicker">Product research</p>
+                        <h3>OpenPlate</h3>
+                        <p>A food experiment workspace for collecting recipes, testing practical utility, and shaping repeatable content workflows.</p>
+                        <div class="tag-row"><span>Research</span><span>Workflow</span><span>Prototype</span></div>
+                    </div>
+                    <button type="button" class="text-button" data-modal-target="openplate">Open notes</button>
+                </article>
+
+                <article class="bento-card project-card tone-violet reveal" data-project-card>
+                    <div class="artifact-mark">DT</div>
+                    <div class="card-content">
+                        <p class="card-kicker">Game prototype</p>
+                        <h3>Death Tag</h3>
+                        <p>A laser-tag-inspired mobile game exploring local competition, quick rounds, and real-time player feedback.</p>
+                        <div class="tag-row"><span>Unity</span><span>C#</span><span>Multiplayer</span></div>
+                    </div>
+                    <div class="card-actions">
+                        <button type="button" class="text-button" data-modal-target="death-tag">Open notes</button>
+                        <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" target="_blank" rel="noopener noreferrer">Play Store</a>
                     </div>
                 </article>
 
-                <article class="project-card wide-card">
-                    <div class="project-content">
-                        <span class="category-label">AI systems</span>
-                        <h3 class="project-title">MyTelkom App Enhancement</h3>
-                        <p class="project-description">A Telkom 10X Hackathon build that enhanced a service app concept with AI interactions, text-to-speech, and speech-to-text after a rapid Unity-to-React pivot.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">AI</span>
-                            <span class="tag">TTS/STT</span>
-                            <span class="tag">Team Project</span>
-                        </div>
+                <article class="bento-card project-card wide-card tone-sun reveal" data-project-card>
+                    <div class="card-content">
+                        <p class="card-kicker">Hackathon artifact</p>
+                        <h3>MyTelkom App Enhancement</h3>
+                        <p>A Telkom 10X sprint build that moved from Unity to React and tested voice, text-to-speech, and assistant-style service flows.</p>
+                        <div class="tag-row"><span>React</span><span>TTS/STT</span><span>Team sprint</span></div>
                     </div>
+                    <button type="button" class="text-button" data-modal-target="mytelkom">Open notes</button>
+                </article>
+
+                <article class="bento-card project-card tone-ink reveal" data-project-card>
+                    <div class="card-content">
+                        <p class="card-kicker">Client interfaces</p>
+                        <h3>Web build practice</h3>
+                        <p>Responsive pages, hosting, UI polish, and practical delivery for people who need clean web presence without clutter.</p>
+                        <div class="tag-row"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    </div>
+                    <button type="button" class="text-button" data-modal-target="client-web">Open notes</button>
+                </article>
+
+                <article class="bento-card project-card tone-coral reveal" data-project-card>
+                    <div class="card-content">
+                        <p class="card-kicker">Creative output</p>
+                        <h3>Devlogs & indie reviews</h3>
+                        <p>Development process, game critique, and small lessons captured as videos for a growing creator-developer audience.</p>
+                        <div class="tag-row"><span>YouTube</span><span>Devlogs</span><span>Reviews</span></div>
+                    </div>
+                    <a class="text-button" href="https://www.youtube.com/@Cedric_Arts" target="_blank" rel="noopener noreferrer">Visit channel</a>
                 </article>
             </div>
         </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">Technologies and tools I work with</p>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <ul class="skill-list">
-                    <li>Python</li>
-                    <li>C#</li>
-                    <li>JavaScript</li>
-                    <li>HTML/CSS</li>
-                    <li>C++ (Learning)</li>
-                </ul>
+        <section class="portfolio-section lab-section" id="lab" aria-labelledby="lab-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Digital lab</p>
+                <h2 id="lab-title">Small experiments, clear signals.</h2>
             </div>
-
-            <div class="skill-category">
-                <h3>Game Development</h3>
-                <ul class="skill-list">
-                    <li>Unity Engine</li>
-                    <li>Game Design</li>
-                    <li>Mobile Game Development</li>
-                    <li>Google Play Console</li>
-                    <li>UI/UX for Games</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Web Development</h3>
-                <ul class="skill-list">
-                    <li>HTML5 & CSS3</li>
-                    <li>React</li>
-                    <li>Responsive Design</li>
-                    <li>Web Hosting</li>
-                    <li>JavaScript ES6+</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h3>Tools & Other</h3>
-                <ul class="skill-list">
-                    <li>Git & GitHub</li>
-                    <li>Canva</li>
-                    <li>CapCut</li>
-                    <li>Project Management</li>
-                    <li>Content Creation</li>
-                </ul>
+            <div class="lab-grid">
+                <article class="lab-card reveal">
+                    <span>01</span>
+                    <h3>Playable loops</h3>
+                    <p>Designing tiny game loops first, then adding systems only when the interaction feels good.</p>
+                </article>
+                <article class="lab-card reveal">
+                    <span>02</span>
+                    <h3>Interface sketches</h3>
+                    <p>Building responsive prototypes that make content feel useful, direct, and easy to navigate.</p>
+                </article>
+                <article class="lab-card reveal">
+                    <span>03</span>
+                    <h3>Learning receipts</h3>
+                    <p>Certifications in JavaScript, responsive design, Python, and business websites back up the daily practice.</p>
+                </article>
             </div>
         </section>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-subtitle">Continuous learning and professional development</p>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <h3 class="cert-title">JavaScript Algorithms and Data Structures</h3>
-                <div class="cert-issuer">freeCodeCamp</div>
-                <div class="cert-date">April 2025 • 300+ hours</div>
-                <a href="https://www.freecodecamp.org/certification/cedric_arts/javascript-algorithms-and-data-structures-v8" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
+        <section class="portfolio-section stack-section" id="stack" aria-labelledby="stack-title">
+            <div class="section-heading reveal">
+                <p class="eyebrow">Technical depth</p>
+                <h2 id="stack-title">Tools used to make the work real.</h2>
             </div>
-
-            <div class="cert-card">
-                <h3 class="cert-title">Responsive Web Design</h3>
-                <div class="cert-issuer">freeCodeCamp</div>
-                <div class="cert-date">February 2025 • 300+ hours</div>
-                <a href="https://www.freecodecamp.org/certification/cedric_arts/responsive-web-design" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
+            <div class="stack-bento">
+                <div class="stack-card reveal"><h3>Languages</h3><p>Python · C# · JavaScript · HTML/CSS · C++ learning track</p></div>
+                <div class="stack-card reveal"><h3>Game development</h3><p>Unity, mobile publishing, gameplay feel, UI for games, Google Play Console.</p></div>
+                <div class="stack-card reveal"><h3>Web development</h3><p>Responsive layouts, React fundamentals, semantic HTML, performance-minded CSS and JavaScript.</p></div>
+                <div class="stack-card reveal"><h3>Production tools</h3><p>Git, GitHub, Canva, CapCut, content systems, project planning, and delivery habits.</p></div>
             </div>
         </section>
 
-            <div class="cert-card">
-                <h3 class="cert-title">Introduction to Generative AI</h3>
-                <div class="cert-issuer">Google/Coursera</div>
-                <div class="cert-date">January 2024</div>
-                <a href="https://www.coursera.org/account/accomplishments/certificate/H3HMNKRLUPB7" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-            </div>
-
-            <div class="cert-card">
-                <h3 class="cert-title">Introduction to Python</h3>
-                <div class="cert-issuer">Coddy.tech</div>
-                <div class="cert-date">October 2025</div>
-                <a href="https://coddy.tech/certifications/yoX9i7-dMHj5s" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-            </div>
-        </section>
-
-            <div class="cert-card">
-                <h3 class="cert-title">Effective Business Websites</h3>
-                <div class="cert-issuer">HP Life</div>
-                <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/d1ffc791-b115-4dc1-ae1b-5a131af30c83" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-            </div>
-
-            <div class="cert-card">
-                <h3 class="cert-title">IT For Business Success</h3>
-                <div class="cert-issuer">HP Life</div>
-                <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/867300af-d50a-4937-954c-1f15114bd457" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-            </div>
-
-            <div class="cert-card">
-                <h3 class="cert-title">AI For Beginners</h3>
-                <div class="cert-issuer">HP Life</div>
-                <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/a5f1be4c-6574-476c-b38f-7a676c566d86" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-            </div>
-
-             <div class="cert-card">
-                <h3 class="cert-title">Finding Funding</h3>
-                <div class="cert-issuer">HP Life</div>
-                <div class="cert-date">September 2025</div>
-                <a href="https://www.life-global.org/certificate/9a4fcef2-a45e-499e-8304-fa74fd9a1526" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
-            </div>
-            <div class="g-ytsubscribe" data-channelid="UCJSndzlnCHrw2P1lIUSkexg" data-layout="full" data-theme="dark" data-count="default"></div>
-        </section>
-
-    <!-- YouTube Section -->
-    <section id="youtube">
-        <h2 class="section-title">Content Creation</h2>
-        <p class="section-subtitle">Game development devlogs and indie game reviews</p>
-
-        <div class="channel-stats">
-            <div class="stats-grid">
-                <div class="stat">
-                    <div class="stat-number">378</div>
-                    <div class="stat-label">Subscribers</div>
-                </div>
-                <div class="about-copy">
-                    <p>I'm a South African developer and creative technologist focused on building digital products, interactive experiences, and experimental systems.</p>
-                    <p>My work spans software development, game development, branding, content creation, rapid prototyping, and creative experimentation.</p>
-                    <p>I enjoy building things that are functional, expressive, and capable of evolving into larger ecosystems over time.</p>
+        <section class="portfolio-section contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-card reveal">
+                <p class="eyebrow">Available for aligned work</p>
+                <h2 id="contact-title">Have a product, game, or web idea that needs a builder?</h2>
+                <p>I’m open to software development, game development, front-end work, internships, and collaborative prototypes.</p>
+                <div class="contact-links" aria-label="Contact links">
+                    <a href="mailto:cedricmnisi01@gmail.com">Email</a>
+                    <a href="https://github.com/cedricarts" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/njabulo-cedric-mnisi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://cedric-arts.itch.io" target="_blank" rel="noopener noreferrer">Itch.io</a>
+                    <a href="cedric_mnisi_resume.pdf">Resume</a>
                 </div>
             </div>
         </section>
-
-        <div class="youtube-grid">
-            <div class="video-card">
-                <div class="video-placeholder">
-                    <a class="youtube-lite" href="https://www.youtube.com/watch?v=JyRTcSV1mG4" target="_blank" rel="noopener noreferrer" data-youtube-id="JyRTcSV1mG4" aria-label="Play Game Development Devlogs video">
-                        <img src="https://i.ytimg.com/vi/JyRTcSV1mG4/hqdefault.jpg" alt="Game Development Devlogs video thumbnail" loading="lazy" width="480" height="360">
-                        <span class="play-button" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="video-info">
-                    <h3 class="video-title">Game Development Devlogs</h3>
-                    <p>Behind-the-scenes content showcasing the development process of Space Dash and other projects.</p>
-                </div>
-            </div>
-        </section>
-
-            <div class="video-card">
-                <div class="video-placeholder">
-                    <a class="youtube-lite" href="https://www.youtube.com/watch?v=DJvmzeK40hs" target="_blank" rel="noopener noreferrer" data-youtube-id="DJvmzeK40hs" aria-label="Play Indie Game Reviews video">
-                        <img src="https://i.ytimg.com/vi/DJvmzeK40hs/hqdefault.jpg" alt="Indie Game Reviews video thumbnail" loading="lazy" width="480" height="360">
-                        <span class="play-button" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="video-info">
-                    <h3 class="video-title">Indie Game Reviews</h3>
-                    <p>Critical analysis and reviews of indie games from platforms like itch.io, providing developer perspectives.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-action">
-            <a href="https://www.youtube.com/@Cedric_Arts" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit Channel</a>
-        </div>
-
-
-
-<div class="g-ytsubscribe" data-channelid="UCJSndzlnCHrw2P1lIUSkexg" data-layout="full" data-theme="dark" data-count="default"></div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <p class="contact-intro">
-                I'm currently seeking opportunities in software development, game development, and web development. Let's connect!
-            </p>
-
-            <!-- LinkedIn Badge -->
-            <div class="linkedin-card">
-                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="njabulo-cedric-mnisi" data-version="v1">
-                    <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/njabulo-cedric-mnisi?trk=profile-badge">View LinkedIn Profile</a>
-                </div>
-                <a href="cedric_mnisi_resume.pdf" class="btn btn-primary" download>Download Resume</a>
-            </div>
-
-            <div class="contact-links">
-                <a href="mailto:cedricmnisi01@gmail.com" class="contact-link">
-                    <div class="contact-icon"><svg viewBox="0 0 24 24" role="img" aria-label="Email icon"><path d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.4-.95 6.6 5.2 6.6-5.2a1.2 1.2 0 0 0-.35-.05H5.75c-.12 0-.24.02-.35.05Zm13.85 2.1-6.47 5.1a1.25 1.25 0 0 1-1.56 0L4.75 7.9v9.35c0 .55.45 1 1 1h12.5c.55 0 1-.45 1-1V7.9Z"/></svg></div>
-                    <div>Email</div>
-                </a>
-
-                <a href="https://github.com/cedricarts" class="contact-link" target="_blank">
-                    <div class="contact-icon"><i class="fa-brands fa-github-alt"></i></div>
-                    <div>GitHub</div>
-                </a>
-
-                <a href="https://www.linkedin.com/in/njabulo-cedric-mnisi" class="contact-link" target="_blank">
-                    <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                    <div>LinkedIn</div>
-                </a>
-
-                <a href="https://cedric-arts.itch.io" class="contact-link" target="_blank">
-                    <div class="contact-icon"><i class="fa-brands fa-itch-io"></i></div>
-                    <div>Itch.io</div>
-                </a>
-            </div>
-
-            <div style="margin-top: 3rem;">
-                <a href="cedric_mnisi_resume.pdf" class="btn btn-primary">Download Resume</a>
-            </div>
-        </div>
-    </section>
-
     </main>
 
-    <!-- Footer -->
+    <dialog class="project-modal" data-project-modal aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-modal-close aria-label="Close project details">×</button>
+        <p class="card-kicker" data-modal-kicker></p>
+        <h2 id="modal-title" data-modal-title></h2>
+        <p data-modal-description></p>
+        <ul class="modal-list" data-modal-list></ul>
+    </dialog>
+
     <footer class="site-footer">
-        <p>&copy; 2025 - 2026 Njabulo Cedric Mnisi. Built with passion and code.</p>
-        <p class="footer-location">Emalahleni, South Africa</p>
+        <p>&copy; 2025 - 2026 Njabulo Cedric Mnisi. Built as a visual lab for shipped ideas.</p>
+        <p>Emalahleni, South Africa</p>
     </footer>
 
     <script src="script.js" defer></script>
