@@ -32,7 +32,6 @@ themeToggles.forEach((toggle) => {
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (!target) return;
 
@@ -52,7 +51,9 @@ const closeMobileNav = () => {
   mobileNav.classList.remove('open');
   mobileBackdrop.classList.remove('open');
   mobileNav.setAttribute('aria-hidden', 'true');
+  mobileNav.setAttribute('inert', '');
   navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Open navigation');
 };
 
 const openMobileNav = () => {
@@ -60,7 +61,9 @@ const openMobileNav = () => {
   mobileNav.classList.add('open');
   mobileBackdrop.classList.add('open');
   mobileNav.setAttribute('aria-hidden', 'false');
+  mobileNav.removeAttribute('inert');
   navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.setAttribute('aria-label', 'Close navigation');
 };
 
 if (navToggle && mobileNav && mobileBackdrop) {
