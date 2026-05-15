@@ -9,6 +9,7 @@
     <meta name="author" content="Njabulo Cedric Mnisi">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://cedricarts.netlify.app/">
+    <link rel="icon" href="images/ca-logo.png" type="image/png">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cedric Arts | Software & Game Development Portfolio">
@@ -42,11 +43,11 @@
         <div class="nav-container">
             <div class="logo">Cedric Arts</div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#youtube">Content</a></li>
+                <li><a href="#experiments">Experiments</a></li>
+                <li><a href="#client-work">Client Work</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="nav-controls">
@@ -64,9 +65,10 @@
                 <button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>Dark</button>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#certifications">Certifications</a>
-                <a href="#youtube">Content</a>
+                <a href="#experiments">Experiments</a>
+                <a href="#client-work">Client Work</a>
+                <a href="#content">Content</a>
+                <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -86,7 +88,7 @@
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
             </div>
         </div>
-    </section>
+    </header>
 
     <!-- About Section -->
     <section id="about">
@@ -105,137 +107,95 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">From published games to hackathon projects</p>
-        <div class="projects-grid">
-            <!-- Space Dash -->
-            <div class="project-card">
-                <div class="project-image">🚀</div>
-                <div class="project-content">
-                    <h3 class="project-title">Space Dash</h3>
-                    <p class="project-description">
-                        A mobile space shooter game published on Google Play Store. Features asteroid dodging mechanics and ongoing story integration. Currently at 85 downloads with a 4.2★ rating.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">Mobile</span>
-                        <span class="tag">Published</span>
+            <div class="bento-grid project-bento">
+                <article class="project-card featured-card">
+                    <div class="project-image product-preview">
+                        <img src="images/spacedash.png" alt="Space Dash logo">
                     </div>
                     <div class="project-links">
                         <a href="https://play.google.com/store/apps/details?id=com.nas.spacedash" class="project-link" target="_blank" rel="noopener noreferrer">Play Store →</a>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Death Tag -->
-            <div class="project-card">
-                <div class="project-image">🎯</div>
-                <div class="project-content">
-                    <h3 class="project-title">Death Tag</h3>
-                    <p class="project-description">
-                        P2P laser tag-inspired mobile game currently in development. Features multiplayer mechanics and real-time gameplay using Unity networking.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">Multiplayer</span>
-                        <span class="tag">In Progress</span>
+                <article class="project-card">
+                    <div class="project-content">
+                        <span class="category-label">Products</span>
+                        <h3 class="project-title">OpenPlate</h3>
+                        <p class="project-description">A research-led food experiment system exploring practical utility, content, data capture, and productized workflows.</p>
+                        <div class="project-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Product System</span>
+                            <span class="tag">Active Build</span>
+                        </div>
                     </div>
                     <div class="project-links">
                         <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener noreferrer">Play Store →</a>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Telkom Hackathon -->
-            <div class="project-card">
-                <div class="project-image">📱</div>
-                <div class="project-content">
-                    <h3 class="project-title">MyTelkom App Enhancement</h3>
-                    <p class="project-description">
-                        Hackathon project enhancing Telkom's MyTelkom App with AI interactions, text-to-speech, and speech-to-text features. Built with React after pivoting from Unity mid-development.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">TTS/STT</span>
-                        <span class="tag">Team Project</span>
+                <article class="project-card">
+                    <div class="project-content">
+                        <span class="category-label">Games</span>
+                        <h3 class="project-title">Death Tag</h3>
+                        <p class="project-description">A P2P laser tag-inspired mobile game in development, exploring multiplayer mechanics and real-time gameplay.</p>
+                        <div class="project-tags">
+                            <span class="tag">Unity</span>
+                            <span class="tag">C#</span>
+                            <span class="tag">Multiplayer</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.synergy.deathtag" class="project-link" target="_blank" rel="noopener">View on Play Store</a>
+                        </div>
                     </div>
-                </div>
-            </div>
+                </article>
 
-            <!-- Freelance Web Projects -->
-            <div class="project-card">
-                <div class="project-image">🌐</div>
-                <div class="project-content">
-                    <h3 class="project-title">Client Websites</h3>
-                    <p class="project-description">
-                        Responsive websites built for 4+ clients including business landing pages, portfolio sites, and e-commerce integration. Delivered measurable results with increased customer engagement.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">Client Work</span>
+                <article class="project-card wide-card">
+                    <div class="project-content">
+                        <span class="category-label">AI systems</span>
+                        <h3 class="project-title">MyTelkom App Enhancement</h3>
+                        <p class="project-description">A Telkom 10X Hackathon build that enhanced a service app concept with AI interactions, text-to-speech, and speech-to-text after a rapid Unity-to-React pivot.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">TTS/STT</span>
+                            <span class="tag">Team Project</span>
+                        </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <p class="section-subtitle">Technologies and tools I work with</p>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <ul class="skill-list">
-                    <li>Python</li>
-                    <li>C#</li>
-                    <li>JavaScript</li>
-                    <li>HTML/CSS</li>
-                    <li>C++ (Learning)</li>
-                </ul>
+        <section id="experiments">
+            <div class="section-heading split-heading">
+                <div>
+                    <p class="eyebrow">Active experiments</p>
+                    <h2 class="section-title">A living lab for ideas in motion.</h2>
+                </div>
+                <p class="section-subtitle">This is where prototypes, workflow systems, UI concepts, and creative tooling stay visible while they evolve.</p>
             </div>
-            
-            <div class="skill-category">
-                <h3>Game Development</h3>
-                <ul class="skill-list">
-                    <li>Unity Engine</li>
-                    <li>Game Design</li>
-                    <li>Mobile Game Development</li>
-                    <li>Google Play Console</li>
-                    <li>UI/UX for Games</li>
-                </ul>
+            <div class="experiment-grid">
+                <article class="experiment-card">
+                    <span class="status-pill">Researching</span>
+                    <h3>OpenPlate research system</h3>
+                    <p>Testing how food research, personal experiments, repeatable templates, and content can become one practical product loop.</p>
+                </article>
+                <article class="experiment-card">
+                    <span class="status-pill">Prototyping</span>
+                    <h3>AI workflow pipelines</h3>
+                    <p>Designing small automations for planning, ideation, dashboards, content support, and faster product iteration.</p>
+                </article>
+                <article class="experiment-card">
+                    <span class="status-pill">Active Build</span>
+                    <h3>Content management dashboard</h3>
+                    <p>Exploring a lightweight command center for build logs, video planning, experiments, and recency signals.</p>
+                </article>
+                <article class="experiment-card">
+                    <span class="status-pill">Iterating</span>
+                    <h3>Experimental UI systems</h3>
+                    <p>Minimal bento layouts, responsive showcase cards, and interaction patterns that make project work feel like products.</p>
+                </article>
             </div>
-            
-            <div class="skill-category">
-                <h3>Web Development</h3>
-                <ul class="skill-list">
-                    <li>HTML5 & CSS3</li>
-                    <li>React</li>
-                    <li>Responsive Design</li>
-                    <li>Web Hosting</li>
-                    <li>JavaScript ES6+</li>
-                </ul>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Tools & Other</h3>
-                <ul class="skill-list">
-                    <li>Git & GitHub</li>
-                    <li>Canva</li>
-                    <li>CapCut</li>
-                    <li>Project Management</li>
-                    <li>Content Creation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Certifications Section -->
     <section id="certifications">
@@ -255,6 +215,7 @@
                 <div class="cert-date">February 2025 • 300+ hours</div>
                 <a href="https://www.freecodecamp.org/certification/cedric_arts/responsive-web-design" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
+        </section>
 
             <div class="cert-card">
                 <h3 class="cert-title">Introduction to Generative AI</h3>
@@ -269,6 +230,7 @@
                 <div class="cert-date">October 2025</div>
                 <a href="https://coddy.tech/certifications/yoX9i7-dMHj5s" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
+        </section>
 
             <div class="cert-card">
                 <h3 class="cert-title">Effective Business Websites</h3>
@@ -297,26 +259,22 @@
                 <div class="cert-date">September 2025</div>
                 <a href="https://www.life-global.org/certificate/9a4fcef2-a45e-499e-8304-fa74fd9a1526" class="cert-link" target="_blank" rel="noopener noreferrer">View Certificate →</a>
             </div>
-        </div>
-    </section>
+            <div class="g-ytsubscribe" data-channelid="UCJSndzlnCHrw2P1lIUSkexg" data-layout="full" data-theme="dark" data-count="default"></div>
+        </section>
 
-    <!-- YouTube Section -->
-    <section id="youtube">
-        <h2 class="section-title">Content Creation</h2>
-        <p class="section-subtitle">Game development devlogs and indie game reviews</p>
-        
-        <div class="channel-stats">
-            <div class="stats-grid">
-                <div class="stat">
-                    <div class="stat-number">378</div>
-                    <div class="stat-label">Subscribers</div>
+        <section id="about">
+            <div class="about-grid">
+                <div>
+                    <p class="eyebrow">About</p>
+                    <h2 class="section-title align-left">Grounded, experimental, builder-oriented.</h2>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">7,9K+</div>
-                    <div class="stat-label">Total Views</div>
+                <div class="about-copy">
+                    <p>I'm a South African developer and creative technologist focused on building digital products, interactive experiences, and experimental systems.</p>
+                    <p>My work spans software development, game development, branding, content creation, rapid prototyping, and creative experimentation.</p>
+                    <p>I enjoy building things that are functional, expressive, and capable of evolving into larger ecosystems over time.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <div class="youtube-grid">
             <div class="video-card">
@@ -331,6 +289,7 @@
                     <p>Behind-the-scenes content showcasing the development process of Space Dash and other projects.</p>
                 </div>
             </div>
+        </section>
 
             <div class="video-card">
                 <div class="video-placeholder">
@@ -368,6 +327,7 @@
                 <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="njabulo-cedric-mnisi" data-version="v1">
                     <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/njabulo-cedric-mnisi?trk=profile-badge">View LinkedIn Profile</a>
                 </div>
+                <a href="cedric_mnisi_resume.pdf" class="btn btn-primary" download>Download Resume</a>
             </div>
             
             <div class="contact-links">
