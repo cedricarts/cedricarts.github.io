@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "lastUpdated": "2026-08-13",
+  "dynamic": {
+    "youtubeSubscribers": null,
+    "youtubeViews": null,
+    "youtubeVideos": null,
+    "githubPublicRepositories": null,
+    "githubStars": null,
+    "githubFollowers": null,
+    "studxUsers": null
+  },
+  "curated": {
+    "productsBuilt": 4,
+    "publishedApps": 2,
+    "majorVentures": 4,
+    "gamesShipped": 2
+  },
+  "sources": {
+    "youtube": "YouTube Data API via GitHub Actions secret",
+    "github": "GitHub public API",
+    "studx": "Curated or secure server-side source only"
+  }
+}
