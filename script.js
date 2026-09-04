@@ -99,35 +99,41 @@ if ('IntersectionObserver' in window) {
 }
 
 const projectDetails = {
+  studx: {
+    kicker: 'Live / early growth · Student marketplace',
+    title: 'StudX',
+    description: 'A student marketplace focused initially on TVET students, built around seller and buyer flows, listings, campus services, mobile use, StudX Eats, vendor functionality, and marketplace infrastructure.',
+    points: ['Built with React, Vite, Firebase, and Yoco payment integration.', 'Exact user counts stay in metrics.json and are not hardcoded into the page.', 'Positioned as a real product while leaving room for feedback and iteration.']
+  },
+  forgehub: {
+    kicker: 'Concept / validation · Developer community',
+    title: 'ForgeHub',
+    description: 'A developer-focused social and collaboration platform built around community, collaboration, projects, events, and awareness within the South African development ecosystem.',
+    points: ['Designed with South African developers in mind while welcoming developers from elsewhere.', 'Potential features include profiles, collaboration, events, game jams, community, projects, and services.', 'Currently presented as concept and validation work, not as a launched platform.']
+  },
+  likhaia: {
+    kicker: 'Concept / development · Consumer lifestyle technology',
+    title: 'LIKHAIA',
+    description: 'A consumer lifestyle venture creating thoughtfully designed technology, furniture, and everyday products for smarter, more sustainable living.',
+    points: ['Future concepts may include a smart desk lamp, smart living-room table, and shoe washer.', 'The portfolio does not claim these concepts are commercially available.', 'The card uses a small geometric mark inspired by the LIKHAIA identity.']
+  },
+  vaia: {
+    kicker: 'Concept / validation · Smart mobility',
+    title: 'Vaia',
+    description: 'A smart mobility venture concept exploring how local movement, access, routes, and digital coordination could work together.',
+    points: ['Presented as validation work rather than an operational service.', 'Part of the Horizon Synergy venture set.', 'Focused on mobility systems and product discovery.']
+  },
   'space-dash': {
-    kicker: 'Shipped mobile game',
+    kicker: 'Published mobile game',
     title: 'Space Dash',
     description: 'A compact arcade game built and shipped to Google Play. The project demonstrates production follow-through: gameplay, store assets, publishing, and iteration after release.',
     points: ['Built with Unity and C# for mobile play.', 'Focused on quick-session arcade pacing.', 'Published publicly through Google Play Console.']
-  },
-  openplate: {
-    kicker: 'Product research',
-    title: 'OpenPlate',
-    description: 'A practical food-product experiment: part research board, part content pipeline, part workflow prototype for testing recipes and usefulness.',
-    points: ['Organizes ideas into repeatable experiments.', 'Prioritizes utility and clear documentation.', 'Designed as a small product system that can grow through use.']
   },
   'death-tag': {
     kicker: 'Game prototype',
     title: 'Death Tag',
     description: 'A mobile game concept inspired by laser tag. The artifact explores player feedback, fast rounds, and multiplayer-feeling interaction patterns.',
     points: ['Unity and C# gameplay implementation.', 'Prototype focus on feedback loops and round structure.', 'Built around a clear, easy-to-understand game premise.']
-  },
-  mytelkom: {
-    kicker: 'Hackathon artifact',
-    title: 'MyTelkom App Enhancement',
-    description: 'A Telkom 10X Hackathon build produced under time pressure, including a Unity-to-React pivot and experiments with speech interfaces.',
-    points: ['React interface built during a rapid sprint.', 'Explored text-to-speech and speech-to-text service flows.', 'Team delivery under hackathon constraints.']
-  },
-  'client-web': {
-    kicker: 'Client interfaces',
-    title: 'Web build practice',
-    description: 'A set of practical web builds focused on clean presentation, responsive structure, and direct communication for clients and collaborators.',
-    points: ['Semantic HTML, CSS, and JavaScript implementation.', 'Responsive layouts tuned for mobile first.', 'Delivery mindset: clear pages, accessible links, and maintainable structure.']
   }
 };
 
@@ -175,3 +181,65 @@ modal?.addEventListener('click', (event) => {
 modal?.addEventListener('cancel', () => {
   document.body.classList.remove('modal-open');
 });
+
+const metricsGrid = document.querySelector('[data-metrics-grid]');
+const metricsStatus = document.querySelector('[data-metrics-status]');
+
+const metricDefinitions = [
+  { section: 'curated', key: 'productsBuilt', label: 'Products and ventures', suffix: '+' },
+  { section: 'curated', key: 'publishedApps', label: 'Published apps', suffix: '+' },
+  { section: 'dynamic', key: 'studxUsers', label: 'StudX users', suffix: '+' },
+  { section: 'dynamic', key: 'youtubeSubscribers', label: 'YouTube community', suffix: '+' },
+  { section: 'dynamic', key: 'githubPublicRepositories', label: 'Public repositories', suffix: '' }
+];
+
+const isDisplayableMetric = (value) => Number.isFinite(Number(value)) && Number(value) > 0;
+
+const formatMetricValue = (value, suffix = '') => {
+  const number = Number(value);
+  const formatted = number >= 1000 ? Intl.NumberFormat('en', { notation: 'compact' }).format(number) : String(number).padStart(number < 10 ? 2 : 1, '0');
+  return `${formatted}${suffix}`;
+};
+
+const formatMetricsDate = (dateValue) => {
+  if (!dateValue) return 'Updated recently';
+  const date = new Date(`${dateValue}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return 'Updated recently';
+  const ageDays = Math.floor((Date.now() - date.getTime()) / 86400000);
+  if (ageDays <= 7) return 'Updated recently';
+  return `Updated ${dateValue}`;
+};
+
+const renderMetrics = (metrics) => {
+  if (!metricsGrid) return;
+  const cards = metricDefinitions
+    .map((definition) => ({ ...definition, value: metrics?.[definition.section]?.[definition.key] }))
+    .filter((metric) => isDisplayableMetric(metric.value))
+    .slice(0, 5);
+
+  metricsGrid.replaceChildren(...cards.map((metric) => {
+    const card = document.createElement('div');
+    const value = document.createElement('strong');
+    const label = document.createElement('span');
+    value.textContent = formatMetricValue(metric.value, metric.suffix);
+    label.textContent = metric.label;
+    card.append(value, label);
+    return card;
+  }));
+
+  if (metricsStatus) metricsStatus.textContent = cards.length ? formatMetricsDate(metrics.lastUpdated) : 'Portfolio signals loading quietly';
+};
+
+const loadMetrics = async () => {
+  if (!metricsGrid) return;
+  try {
+    const response = await fetch(`data/metrics.json?v=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) throw new Error('Metrics unavailable');
+    renderMetrics(await response.json());
+  } catch {
+    renderMetrics({ curated: {}, dynamic: {}, lastUpdated: null });
+    if (metricsStatus) metricsStatus.textContent = 'Portfolio signals unavailable';
+  }
+};
+
+loadMetrics();

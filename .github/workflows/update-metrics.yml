@@ -1,0 +1,42 @@
+name: Update portfolio metrics
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate metrics
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+          METRICS_GITHUB_TOKEN: ${{ secrets.METRICS_GITHUB_TOKEN }}
+          GITHUB_USERNAME: cedricarts
+          STUDX_USERS: ${{ secrets.STUDX_USERS }}
+        run: node scripts/update-metrics.mjs
+
+      - name: Commit metrics when changed
+        run: |
+          if git diff --quiet -- data/metrics.json; then
+            echo "No metrics changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/metrics.json
+          git commit -m "chore: update portfolio metrics"
+          git push
