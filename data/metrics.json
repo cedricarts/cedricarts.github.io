@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-09-04",
   "dynamic": {
-    "youtubeSubscribers": null,
-    "youtubeViews": null,
-    "youtubeVideos": null,
-    "githubPublicRepositories": null,
-    "githubStars": null,
-    "githubFollowers": null,
+    "youtubeSubscribers": 399,
+    "youtubeViews": 9298,
+    "youtubeVideos": 38,
+    "githubPublicRepositories": 33,
+    "githubStars": 4,
+    "githubFollowers": 0,
     "studxUsers": null
   },
   "curated": {
