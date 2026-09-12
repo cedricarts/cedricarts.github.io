@@ -1,16 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | Cedric Arts</title>
-    <meta name="description" content="Certification highlights and learning milestones from Cedric Arts.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://cedricarts.netlify.app/cert.html">
+    <script src="https://kit.fontawesome.com/c487386ab7.js" crossorigin="anonymous"></script>
+    <title>Certificates & Learning | Cedric Arts</title>
+    <meta name="description" content="School qualifications, certifications, courses, and self-taught learning milestones earned by Njabulo Cedric Mnisi.">
+    <meta name="author" content="Njabulo Cedric Mnisi">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://cedricarts.github.io/cert.html">
+    <link rel="icon" href="images/ca-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Certifications</h1>
-    <p>Explore certifications on the main portfolio page.</p>
-    <p><a href="/">Back to homepage</a></p>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="ambient-field" aria-hidden="true"></div>
+    <header class="site-header">
+        <nav class="nav-container" aria-label="Primary navigation">
+            <a class="logo" href="index.html" aria-label="Cedric Arts home"><img src="images/ca-logo.png" alt="" width="34" height="34"><span>Cedric Arts</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="#certificates" aria-current="page">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls"><button class="theme-toggle" type="button" aria-label="Toggle color theme" data-theme-toggle>Dark</button><button class="nav-toggle" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+        </nav>
+        <div class="mobile-nav" id="mobile-menu" aria-hidden="true" inert><button class="mobile-nav-close" type="button" aria-label="Close navigation">×</button><a href="index.html#work">Work</a><a href="index.html#projects">Projects</a><a href="#certificates">Certificates</a><a href="index.html#contact">Contact</a></div>
+        <div class="mobile-nav-backdrop" data-mobile-nav-backdrop></div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero certificate-hero" aria-labelledby="certificate-title">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Always learning · In and out of class</p>
+                <h1 id="certificate-title">Certificates & learning milestones.</h1>
+                <p class="hero-intro">A growing archive of formal qualifications, online courses, workshops, and the self-directed learning that shapes how I build.</p>
+                <div class="cta-buttons"><a href="#certificates" class="btn btn-primary">Browse certificates</a><a href="index.html" class="btn btn-secondary">Back home</a></div>
+            </div>
+            <aside class="learning-panel reveal" aria-label="Learning philosophy">
+                <span class="learning-number">∞</span>
+                <p class="eyebrow">Learning never ships a final version</p>
+                <h2>Study. Make. Reflect. Repeat.</h2>
+                <p>Each credential belongs here because it added a useful idea, tool, or way of thinking.</p>
+            </aside>
+        </section>
+
+        <section class="portfolio-section" id="certificates" aria-labelledby="certificates-title">
+            <div class="section-heading reveal">
+                <div>
+                    <p class="eyebrow">The archive</p>
+                    <h2 id="certificates-title">Proof of progress, wherever it happened.</h2>
+                </div>
+                <p class="section-note">Add one item to <code>data/portfolio-content.js</code> and this grid updates automatically.</p>
+            </div>
+            <div class="content-grid certificate-grid" data-certificates-grid aria-live="polite"></div>
+            <noscript><p class="empty-message">JavaScript is required to display the certificate archive.</p></noscript>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2023 - 2026 Njabulo Cedric Mnisi. Built as a visual lab for shipped ideas.</p>
+        <p>Emalahleni, South Africa</p>
+    </footer>
+    <script src="data/portfolio-content.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
