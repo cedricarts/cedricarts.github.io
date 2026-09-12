@@ -125,6 +125,8 @@ h3 { max-width: 12ch; font-size: clamp(1.7rem, 3vw, 2.45rem); }
 .portfolio-section { padding-block: 3.2rem; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.4rem; margin-bottom: 1.4rem; }
 .section-heading h2 { max-width: 730px; }
+.section-note { max-width: 340px; color: var(--text-muted); font-size: 0.92rem; }
+.section-note code { color: var(--accent-4); font-family: 'Space Mono', monospace; font-size: 0.78rem; }
 .bento-grid { display: grid; grid-auto-flow: dense; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; }
 .bento-card { display: flex; min-height: 330px; grid-column: span 4; flex-direction: column; justify-content: space-between; padding: 1rem; transition: transform 150ms ease, box-shadow 150ms ease; }
 .bento-card:hover, .lab-card:hover, .stack-card:hover, .contact-card:hover, .horizon-card:hover { transform: translate(5px, 5px); box-shadow: 2px 2px 0 var(--border); }
@@ -153,6 +155,31 @@ h3 { max-width: 12ch; font-size: clamp(1.7rem, 3vw, 2.45rem); }
 .tone-ink { background: #272334; color: var(--paper); }
 .tone-coral { background: var(--accent); color: var(--ink); }
 .tone-ink .artifact-mark { background: var(--accent-4); color: var(--ink); }
+
+.content-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 1.2rem; }
+.content-card { display: flex; min-height: 440px; flex-direction: column; overflow: hidden; border: 3px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); box-shadow: var(--shadow); transition: transform 150ms ease, box-shadow 150ms ease; }
+.content-card:hover { transform: translate(5px, 5px); box-shadow: 2px 2px 0 var(--border); }
+.content-card:nth-child(4n + 1) .content-card-media { background: var(--accent-2); }
+.content-card:nth-child(4n + 2) .content-card-media { background: var(--accent-3); }
+.content-card:nth-child(4n + 3) .content-card-media { background: var(--accent); }
+.content-card:nth-child(4n) .content-card-media { background: var(--accent-4); }
+.content-card-media { display: grid; min-height: 190px; place-items: center; overflow: hidden; border-bottom: 3px solid var(--border); color: var(--ink); }
+.content-card-media img { width: 100%; height: 210px; object-fit: cover; }
+.content-card-mark { display: grid; width: 104px; height: 78px; place-items: center; transform: rotate(-3deg); border: 3px solid var(--ink); background: var(--paper); box-shadow: 6px 6px 0 var(--ink); font-family: 'Space Mono', monospace; font-size: 1.1rem; font-weight: 700; }
+.content-card-body { flex: 1; padding: 1.2rem; }
+.content-card-body h3 { margin: 0.55rem 0 0.8rem; }
+.content-card-body > p:not(.card-kicker) { color: var(--text-muted); }
+.content-card-link, .placeholder-label { align-self: flex-start; margin: 0 1.2rem 1.2rem; border: 2px solid var(--border); background: var(--accent-4); box-shadow: var(--shadow-sm); color: var(--ink); padding: 0.62rem 0.75rem; font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; text-decoration: none; }
+.content-card-link:hover { transform: translate(3px, 3px); box-shadow: none; }
+.placeholder-card { border-style: dashed; }
+.placeholder-label { background: var(--paper); box-shadow: none; }
+.certificate-hero { min-height: min(700px, calc(100vh - 68px)); }
+.certificate-hero h1 { max-width: 9ch; font-size: clamp(3.3rem, 8vw, 7rem); }
+.learning-panel { min-height: 430px; display: flex; flex-direction: column; justify-content: flex-end; border: 3px solid var(--border); border-radius: var(--radius-lg); background: var(--accent-3); box-shadow: var(--shadow); color: var(--ink); padding: clamp(1.2rem, 4vw, 2rem); }
+.learning-number { margin-bottom: auto; font-family: 'Space Mono', monospace; font-size: 6rem; font-weight: 700; line-height: 1; }
+.learning-panel .eyebrow { color: var(--ink); opacity: 0.72; }
+.learning-panel h2 { margin: 0.55rem 0 1rem; font-size: clamp(2.3rem, 4vw, 4rem); }
+.empty-message { border: 3px solid var(--border); background: var(--surface); padding: 1rem; }
 
 .lab-grid, .stack-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 .lab-card, .stack-card, .contact-card { padding: 1.25rem; transition: transform 150ms ease, box-shadow 150ms ease; }
@@ -215,7 +242,7 @@ h3 { max-width: 12ch; font-size: clamp(1.7rem, 3vw, 2.45rem); }
 @media (max-width: 520px) {
   .card-actions, .contact-links, .cta-buttons { align-items: stretch; flex-direction: column; }
   .card-actions a, .text-button, .btn, .contact-links a { width: 100%; }
-  .hero-panel, .bento-card, .lab-card, .stack-card, .contact-card, .horizon-card { box-shadow: 5px 5px 0 var(--border); }
+  .hero-panel, .bento-card, .lab-card, .stack-card, .contact-card, .horizon-card, .content-card, .learning-panel { box-shadow: 5px 5px 0 var(--border); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }

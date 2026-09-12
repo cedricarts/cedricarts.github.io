@@ -81,6 +81,85 @@ if (cursorGlow && !reducedMotion.matches) {
   }, { passive: true });
 }
 
+const createTags = (tags = []) => {
+  const tagRow = document.createElement('div');
+  tagRow.className = 'tag-row';
+  tags.forEach((tag) => {
+    const item = document.createElement('span');
+    item.textContent = tag;
+    tagRow.append(item);
+  });
+  return tagRow;
+};
+
+const createCardMedia = (item, fallbackText) => {
+  const media = document.createElement('div');
+  media.className = 'content-card-media';
+
+  if (item.image) {
+    const image = document.createElement('img');
+    image.src = item.image;
+    image.alt = `${item.title} artwork`;
+    image.loading = 'lazy';
+    media.append(image);
+  } else {
+    const mark = document.createElement('span');
+    mark.className = 'content-card-mark';
+    mark.setAttribute('aria-hidden', 'true');
+    mark.textContent = fallbackText;
+    media.append(mark);
+  }
+
+  return media;
+};
+
+const createContentCard = (item, kind) => {
+  const card = document.createElement('article');
+  card.className = `content-card ${kind}-card${item.placeholder ? ' placeholder-card' : ''}`;
+  card.append(createCardMedia(item, kind === 'certificate' ? 'CERT' : item.title.slice(0, 2).toUpperCase()));
+
+  const body = document.createElement('div');
+  body.className = 'content-card-body';
+  const kicker = document.createElement('p');
+  kicker.className = 'card-kicker';
+  kicker.textContent = kind === 'certificate'
+    ? [item.type, item.issuer, item.date].filter(Boolean).join(' · ')
+    : item.type;
+  const title = document.createElement('h3');
+  title.textContent = item.title;
+  const description = document.createElement('p');
+  description.textContent = item.description;
+  body.append(kicker, title, description, createTags(item.skills || item.tags));
+  card.append(body);
+
+  if (item.url) {
+    const link = document.createElement('a');
+    link.className = 'content-card-link';
+    link.href = item.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = item.linkLabel || (kind === 'certificate' ? 'View credential' : 'View project');
+    card.append(link);
+  } else if (item.placeholder) {
+    const label = document.createElement('span');
+    label.className = 'placeholder-label';
+    label.textContent = 'Example — replace in the data file';
+    card.append(label);
+  }
+
+  return card;
+};
+
+const renderContentGrid = (selector, items, kind) => {
+  const grid = document.querySelector(selector);
+  if (!grid) return;
+  grid.replaceChildren(...items.map((item) => createContentCard(item, kind)));
+};
+
+const content = window.portfolioContent || { projects: [], certificates: [] };
+renderContentGrid('[data-projects-grid]', content.projects || [], 'project');
+renderContentGrid('[data-certificates-grid]', content.certificates || [], 'certificate');
+
 const revealTargets = document.querySelectorAll('.reveal');
 
 if ('IntersectionObserver' in window) {
