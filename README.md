@@ -8,6 +8,7 @@ This repository contains the static Cedric Arts personal portfolio for Njabulo C
 - `styles.css`: Visual design, layout, typography, responsive behavior, and bento card system.
 - `script.js`: Theme switching, mobile navigation, reveal interactions, project modals, and dynamic metrics loading.
 - `data/metrics.json`: Public aggregated metrics consumed by the static frontend.
+- `data/portfolio-content.js`: The editable project and certificate lists used to build responsive card grids.
 - `scripts/update-metrics.mjs`: GitHub Actions metrics generator.
 - `.github/workflows/update-metrics.yml`: Daily and manual workflow that updates `data/metrics.json` and commits only when values change.
 - `cedric_mnisi_resume.pdf`: Resume linked from the portfolio.
@@ -44,6 +45,10 @@ python -m http.server 8000
 ```
 
 Then open `http://localhost:8000/`.
+
+## Adding Projects and Certificates
+
+Open `data/portfolio-content.js`, copy an existing object in the relevant list, and replace its values. Both pages create their responsive grids automatically. The `image` and `url` values are optional; leave either as an empty string when it is not available.
 
 ## Deployment
 
