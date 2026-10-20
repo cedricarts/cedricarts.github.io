@@ -47,15 +47,15 @@ window.portfolioContent = {
       placeholder: true
     },
     {
-      title: 'Course or learning milestone',
-      issuer: 'Learning platform',
-      date: 'Year completed',
+      title: 'Responsive Web Design',
+      issuer: 'freecodecamp.org',
+      date: 'Feb 7, 2025',
       type: 'Self-taught',
       description: 'Use this card for an online course, workshop, bootcamp, or independent learning milestone.',
-      skills: ['Topic', 'Tool'],
+      skills: ['HTML', 'CSS', 'VS Code'],
       image: '',
-      url: '',
-      placeholder: true
+      url: 'https://www.freecodecamp.org/certification/cedric_arts/responsive-web-design',
+      placeholder: false
     }
   ]
 };
